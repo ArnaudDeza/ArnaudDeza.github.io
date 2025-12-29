@@ -1,7 +1,7 @@
 ---
 title: "A Motivational Interviewing Chatbot With Generative Reflections for Increasing Readiness to Quit Smoking: Iterative Development Study"
 collection: publications
-category: journals
+category: manuscripts
 permalink: /publication/2023-01-01-motivational-interviewing-chatbot
 excerpt: "Iterative development study of a motivational interviewing chatbot."
 date: 2023-01-01
