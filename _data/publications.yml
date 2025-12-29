@@ -1,18 +1,60 @@
 main:
 
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+  - title: "DualSchool: How reliable are LLMs for optimization education?"
+    authors: Klamkin, M*., <strong>Deza, A*.</strong>, Cheng, S., Zhao, H., & Van Hentenryck, P.
+    conference_short: Manuscript under review
+    conference: Manuscript under review, 2025.
+    pdf: https://arxiv.org/pdf/2505.21775
+    code: https://github.com/AI4OPT/DualSchool
+    image: ./assets/img/dualschool_paper.png
 
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
+  - title: "Learn2Aggregate: supervised generation of Chvatal-Gomory cuts using graph neural networks"
+    authors: <strong>Arnaud Deza</strong>, Elias Khalil, Zhenan Fan, Zirui Zhou, Yong Zhang
+    conference_short: AAAI
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
+    pdf: https://arxiv.org/pdf/2002.10211.pdf
+    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+    page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    notes: Oral Presentation
+    image: ./assets/img/teaser_example.png
+
+  - title: "Machine learning for optimization-based separation: the case of mixed-integer rounding cuts"
+    authors: <strong>Arnaud Deza</strong>, Elias Khalil, Zhenan Fan, Zirui Zhou, Yong Zhang
+    conference_short: AAAI
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
+    pdf: https://arxiv.org/pdf/2002.10211.pdf
+    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+    page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    notes: Oral Presentation
+    image: ./assets/img/teaser_example.png
+  
+  - title: "Machine Learning for Cutting Planes in Integer Programming: A Survey"
+    authors: <strong>Arnaud Deza</strong>, Elias Khalil, Zhenan Fan, Zirui Zhou, Yong Zhang
+    conference_short: AAAI
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
+    pdf: https://arxiv.org/pdf/2002.10211.pdf
+    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+    page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    notes: Oral Presentation
+    image: ./assets/img/teaser_example.png
+
+  - title: "Fast Matrix Multiplication Without Tears: A Constraint Programming Approach"
+    authors: <strong>Arnaud Deza</strong>, Elias Khalil, Zhenan Fan, Zirui Zhou, Yong Zhang
+    conference_short: AAAI
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
+    pdf: https://arxiv.org/pdf/2002.10211.pdf
+    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+    page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    notes: Oral Presentation
+    image: ./assets/img/teaser_example.png
+
+  - title: "A motivational interviewing chatbot with generative reflections for increasing readiness to quit smoking: iterative development study"
+    authors: <strong>Arnaud Deza</strong>, Elias Khalil, Zhenan Fan, Zirui Zhou, Yong Zhang
+    conference_short: JMIR
     conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
     pdf: https://arxiv.org/pdf/2002.10211.pdf
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
