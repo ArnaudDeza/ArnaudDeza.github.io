@@ -44,7 +44,7 @@
           {% assign pub_year = post.date | default: "1900-01-01" | date: "%Y" %}
           {% assign venue_lower = post.venue | downcase %}
           {% if venue_lower contains "under review" %}
-            <p>Under review at <i>{{ post.venue | remove: "(under review)" | remove: "(Under review)" | remove: "under review" | remove: "Under review" | strip }}</i>, {{ pub_year }} </p>
+            <p>Under Review, {{ pub_year }} </p>
           {% else %}
             <p>Published in <i>{{ post.venue }}</i>, {{ pub_year }} </p>
           {% endif %}
