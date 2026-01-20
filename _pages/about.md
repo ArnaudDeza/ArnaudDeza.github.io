@@ -11,8 +11,16 @@ I am currently a second year PhD student in the Machine Learning program at Geor
 
 Prior to Georgia Tech, I completed a MASc at the University of Toronto in the Industrial Engineering Department under the supervision of [Elias Khalil](https://scholar.google.com/citations?user=juqDWQMAAAAJ&hl=en) funded by an NSERC CGS-M. During this time I worked at the intersection of machine learning, discrete optimization and optimization solvers.
 
-During my MASC, I was fortunate to intern at Huawei Technologies Canada, in the Vancouver Research Centre. During my intership I worked on integrating machine learning into discrete optimization solver subroutines where I was supervised by [Yong Zhang](https://scholar.google.com/citations?user=K2zamrwAAAAJ&hl=en) and [Zirui Zhou](https://scholar.google.com/citations?user=2fKv_JQAAAAJ&hl=en).
+During my MASc, I was fortunate to intern at Huawei Technologies Canada, in the Vancouver Research Centre. During my internship I worked on integrating machine learning into discrete optimization solver subroutines where I was supervised by [Yong Zhang](https://scholar.google.com/citations?user=K2zamrwAAAAJ&hl=en) and [Zirui Zhou](https://scholar.google.com/citations?user=2fKv_JQAAAAJ&hl=en).
 
+## Research Interests
+- Operations Research
+- Machine Learning
+- Optimization
 
-I completed my BASc in the Engineering Science program at the University of Toronto, majoring in Machine Intelligence.
+## Education
+- **PhD in Machine Learning**, Georgia Tech, 2024–Present
+- **MASc in Industrial Engineering**, University of Toronto, 2022–2024
+- **BASc in Engineering Science** (Machine Intelligence), University of Toronto, 2018–2022
+
 
