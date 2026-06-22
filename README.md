@@ -1,4 +1,4 @@
-# The Minimal Light Theme
+# The Minimal Light Theme test
 
 [![LICENSE](https://img.shields.io/github/license/Xiao-Chenguang/minimal-light?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/Xiao-Chenguang/minimal-light/blob/main/LICENSE)
 
