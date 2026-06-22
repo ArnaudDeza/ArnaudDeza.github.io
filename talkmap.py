@@ -1,5 +1,5 @@
 # Leaflet cluster map of talk locations
-#
+#test
 # Run this from the _talks/ directory, which contains .md files of all your
 # talks. This scrapes the location YAML field from each .md file, geolocates it
 # with geopy/Nominatim, and uses the getorg library to output data, HTML, and
