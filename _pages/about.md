@@ -16,6 +16,18 @@ redirect_from:
 
     <p>During my MASc, I was fortunate to intern at Huawei Technologies Canada, in the Vancouver Research Centre. During my internship I worked on integrating machine learning into discrete optimization solver subroutines where I was supervised by <a href="https://scholar.google.com/citations?user=K2zamrwAAAAJ&amp;hl=en">Yong Zhang</a> and <a href="https://scholar.google.com/citations?user=2fKv_JQAAAAJ&amp;hl=en">Zirui Zhou</a>.</p>
 
+    <section class="home-section">
+      <h2>Research Interests</h2>
+      <div class="tag-list">
+        <span>Machine Learning</span>
+        <span>Large Language Models</span>
+        <span>Operations Research</span>
+        <span>Large-scale Optimization</span>
+        <span>Discrete Optimization</span> 
+        <span>Optimization Solvers</span> 
+      </div>
+    </section>
+
     <section class="home-section home-news">
       <h2>News</h2>
       <div class="news-filter" aria-label="Filter news by year">
@@ -32,7 +44,7 @@ redirect_from:
         </article>
         <article class="news-item" data-year="2026">
           <time datetime="2026-05">May 2026</time>
-          <p>Our new paper "Democratizing Large-Scale Re-Optimization with LLM-Guided Model Patches" is on arXiv!</p>
+          <p>Our new paper <a href="https://arxiv.org/abs/2605.18692">"Democratizing Large-Scale Re-Optimization with LLM-Guided Model Patches"</a> is on arXiv!</p>
         </article>
         <article class="news-item" data-year="2025">
           <time datetime="2025-10">October 2025</time>
@@ -44,11 +56,11 @@ redirect_from:
         </article>
         <article class="news-item" data-year="2025">
           <time datetime="2025-05">May 2025</time>
-          <p>Our new paper "DualSchool: How Reliable are LLMs for Optimization Education?" is on arXiv!</p>
+          <p>Our new paper <a href="https://arxiv.org/abs/2505.21775">"DualSchool: How Reliable are LLMs for Optimization Education?"</a> is on arXiv!</p>
         </article>
         <article class="news-item" data-year="2024">
           <time datetime="2024-12">December 2024</time>
-          <p>Our paper "Learn2Aggregate: Supervised generation of Chvátal-Gomory cuts using graph neural networks" was accepted at AAAI 2025</p>
+          <p>Our paper <a href="https://doi.org/10.1609/AAAI.V39I25.34900">"Learn2Aggregate: Supervised Generation of Chvátal-Gomory Cuts Using Graph Neural Networks"</a> was accepted at AAAI 2025</p>
         </article>
         <article class="news-item" data-year="2024">
           <time datetime="2024-08">August 2024</time>
@@ -72,11 +84,11 @@ redirect_from:
         </article>
         <article class="news-item" data-year="2023">
           <time datetime="2023-05">May 2023</time>
-          <p>Our paper "XXX" was accepted to CP 2023.</p>
+          <p>Our paper <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol280-cp2023/LIPIcs.CP.2023.14/LIPIcs.CP.2023.14.pdf">"Fast Matrix Multiplication Without Tears: A Constraint Programming Approach"</a> was accepted to CP 2023.</p>
         </article>
         <article class="news-item" data-year="2023">
           <time datetime="2023-02">February 2023</time>
-          <p>Our paper "XXX" was accepted to IJCAI 2023.</p>
+          <p>Our paper <a href="https://doi.org/10.24963/ijcai.2023/739">"Machine Learning for Cutting Planes in Integer Programming: A Survey"</a> was accepted to IJCAI 2023.</p>
         </article>
       </div>
     </section>
@@ -105,17 +117,6 @@ redirect_from:
       });
     </script>
 
-    <section class="home-section">
-      <h2>Research Interests</h2>
-      <div class="tag-list">
-        <span>Machine Learning</span>
-        <span>Large Language Models</span>
-        <span>Operations Research</span>
-        <span>Large-scale Optimization</span>
-        <span>Discrete Optimization</span> 
-        <span>Optimization Solvers</span> 
-      </div>
-    </section>
   </main>
 
   <aside class="home-rail" aria-label="Profile highlights">
@@ -169,7 +170,7 @@ redirect_from:
           </div>
         </article>
         <article class="rail-card">
-          <img class="entity-logo" src="/images/Georgia-Tech-Logo.jpg" alt="" onerror="this.hidden=true">
+          <img class="entity-logo" src="/images/AI4OPT-Logo-2.png" alt="" onerror="this.hidden=true">
           <div>
             <p class="info-card__eyebrow">2024-Present</p>
             <h3>Graduate Researcher</h3>
