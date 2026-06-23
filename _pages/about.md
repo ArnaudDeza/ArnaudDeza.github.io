@@ -18,61 +18,92 @@ redirect_from:
 
     <section class="home-section home-news">
       <h2>News</h2>
+      <div class="news-filter" aria-label="Filter news by year">
+        <button type="button" class="news-filter__button is-active" data-news-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="news-filter__button" data-news-filter="2026" aria-pressed="false">2026</button>
+        <button type="button" class="news-filter__button" data-news-filter="2025" aria-pressed="false">2025</button>
+        <button type="button" class="news-filter__button" data-news-filter="2024" aria-pressed="false">2024</button>
+        <button type="button" class="news-filter__button" data-news-filter="2023" aria-pressed="false">2023</button>
+      </div>
       <div class="news-scroll" aria-label="Recent news">
-        <article class="news-item">
+        <article class="news-item" data-year="2026">
           <time datetime="2026-05">May 2026</time>
           <p>I started a summer internship as an Applied Scientist at Salesforce in San Francisco.</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2026">
           <time datetime="2026-05">May 2026</time>
           <p>Our new paper "Democratizing Large-Scale Re-Optimization with LLM-Guided Model Patches" is on arXiv!</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2025">
           <time datetime="2025-10">October 2025</time>
           <p>Attended INFORMS 2025 in Atlanta Georgia</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2025">
           <time datetime="2025-07">July 2025</time>
           <p>Attended ISCP 2025 held at École des Ponts in Paris, France</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2025">
           <time datetime="2025-05">May 2025</time>
           <p>Our new paper "DualSchool: How Reliable are LLMs for Optimization Education?" is on arXiv!</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2024">
           <time datetime="2024-12">December 2024</time>
           <p>Our paper "Learn2Aggregate: Supervised generation of Chvátal-Gomory cuts using graph neural networks" was accepted at AAAI 2025</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2024">
           <time datetime="2024-08">August 2024</time>
           <p>Started my PhD in Machine Learning at Georgia Tech and joined AI4OPT.</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2024">
           <time datetime="2024-08">August 2024</time>
           <p>I succesfully defended my master's thesis.</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2023">
           <time datetime="2023-10">October 2023</time>
           <p>I presented our work and attended INFORMS 2023 in Pheonix, Arizona.</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2023">
           <time datetime="2023-08">August 2023</time>
           <p>I attended CP 2023 in Toronto, Canada.</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2023">
           <time datetime="2023-05">May 2023</time>
           <p>Started my internship at Huawei in Vancouver.</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2023">
           <time datetime="2023-05">May 2023</time>
           <p>Our paper "XXX" was accepted to CP 2023.</p>
         </article>
-        <article class="news-item">
+        <article class="news-item" data-year="2023">
           <time datetime="2023-02">February 2023</time>
           <p>Our paper "XXX" was accepted to IJCAI 2023.</p>
         </article>
       </div>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll("[data-news-filter]");
+        const newsItems = document.querySelectorAll(".news-item[data-year]");
+
+        filterButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            const selectedYear = button.getAttribute("data-news-filter");
+
+            filterButtons.forEach(function (candidate) {
+              const isActive = candidate === button;
+              candidate.classList.toggle("is-active", isActive);
+              candidate.setAttribute("aria-pressed", isActive ? "true" : "false");
+            });
+
+            newsItems.forEach(function (item) {
+              const shouldShow = selectedYear === "all" || item.getAttribute("data-year") === selectedYear;
+              item.hidden = !shouldShow;
+            });
+          });
+        });
+      });
+    </script>
 
     <section class="home-section">
       <h2>Research Interests</h2>
