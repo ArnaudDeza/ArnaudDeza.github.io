@@ -21,23 +21,55 @@ redirect_from:
       <div class="news-scroll" aria-label="Recent news">
         <article class="news-item">
           <time datetime="2026-05">May 2026</time>
-          <p>Started a summer internship as an Applied Scientist at Salesforce in San Francisco.</p>
+          <p>I started a summer internship as an Applied Scientist at Salesforce in San Francisco.</p>
         </article>
         <article class="news-item">
-          <time datetime="2025">2025</time>
-          <p>Paper went on arxiv</p>
+          <time datetime="2026-05">May 2026</time>
+          <p>Our new paper "Democratizing Large-Scale Re-Optimization with LLM-Guided Model Patches" is on arXiv!</p>
         </article>
         <article class="news-item">
-          <time datetime="2025">2025</time>
-          <p>Paper went on arxiv</p>
+          <time datetime="2025-10">October 2025</time>
+          <p>Attended INFORMS 2025 in Atlanta Georgia</p>
         </article>
         <article class="news-item">
-          <time datetime="2025">2025</time>
-          <p>Paper went on arxiv</p>
+          <time datetime="2025-07">July 2025</time>
+          <p>Attended ISCP 2025 held at École des Ponts in Paris, France</p>
         </article>
         <article class="news-item">
-          <time datetime="2024">2024</time>
+          <time datetime="2025-05">May 2025</time>
+          <p>Our new paper "DualSchool: How Reliable are LLMs for Optimization Education?" is on arXiv!</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2024-12">December 2024</time>
+          <p>Our paper "Learn2Aggregate: Supervised generation of Chvátal-Gomory cuts using graph neural networks" was accepted at AAAI 2025</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2024-08">August 2024</time>
           <p>Started my PhD in Machine Learning at Georgia Tech and joined AI4OPT.</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2024-08">August 2024</time>
+          <p>I succesfully defended my master's thesis.</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2023-10">October 2023</time>
+          <p>I presented our work and attended INFORMS 2023 in Pheonix, Arizona.</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2023-08">August 2023</time>
+          <p>I attended CP 2023 in Toronto, Canada.</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2023-05">May 2023</time>
+          <p>Started my internship at Huawei in Vancouver.</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2023-05">May 2023</time>
+          <p>Our paper "XXX" was accepted to CP 2023.</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2023-02">February 2023</time>
+          <p>Our paper "XXX" was accepted to IJCAI 2023.</p>
         </article>
       </div>
     </section>
@@ -46,9 +78,11 @@ redirect_from:
       <h2>Research Interests</h2>
       <div class="tag-list">
         <span>Machine Learning</span>
+        <span>Large Language Models</span>
         <span>Operations Research</span>
         <span>Large-scale Optimization</span>
         <span>Discrete Optimization</span> 
+        <span>Optimization Solvers</span> 
       </div>
     </section>
   </main>
