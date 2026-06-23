@@ -2,6 +2,7 @@
 permalink: /
 title: "Arnaud Deza"
 author_profile: true
+page_class: page--home
 redirect_from: 
   - /about/
   - /about.html
@@ -19,16 +20,20 @@ redirect_from:
       <h2>News</h2>
       <div class="news-scroll" aria-label="Recent news">
         <article class="news-item">
-          <time datetime="2026-09">Fall 2026</time>
-          <p>I will be interning at Amazon.</p>
-        </article>
-        <article class="news-item">
           <time datetime="2026-05">May 2026</time>
-          <p>Started a summer internship as an Applied Scientist at Salesforce.</p>
+          <p>Started a summer internship as an Applied Scientist at Salesforce in San Francisco.</p>
         </article>
         <article class="news-item">
           <time datetime="2025">2025</time>
-          <p>Designed Level 4 GenAI course materials for the AI4OPT Seth Bonder Camp.</p>
+          <p>Paper went on arxiv</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2025">2025</time>
+          <p>Paper went on arxiv</p>
+        </article>
+        <article class="news-item">
+          <time datetime="2025">2025</time>
+          <p>Paper went on arxiv</p>
         </article>
         <article class="news-item">
           <time datetime="2024">2024</time>
@@ -38,29 +43,12 @@ redirect_from:
     </section>
 
     <section class="home-section">
-      <h2>Experience</h2>
-      <div class="timeline-list">
-        <article>
-          <div>
-            <strong>Applied Scientist Intern</strong>
-            <span>Salesforce</span>
-          </div>
-          <time>Summer 2026</time>
-        </article>
-        <article>
-          <div>
-            <strong>Incoming Intern</strong>
-            <span>Amazon</span>
-          </div>
-          <time>Fall 2026</time>
-        </article>
-        <article>
-          <div>
-            <strong>Research Intern</strong>
-            <span>Huawei Technologies Canada, Vancouver Research Centre</span>
-          </div>
-          <time>MASc</time>
-        </article>
+      <h2>Research Interests</h2>
+      <div class="tag-list">
+        <span>Machine Learning</span>
+        <span>Operations Research</span>
+        <span>Large-scale Optimization</span>
+        <span>Discrete Optimization</span> 
       </div>
     </section>
   </main>
@@ -70,32 +58,67 @@ redirect_from:
       <h2>Education</h2>
       <div class="rail-list">
         <article class="rail-card">
-          <p class="info-card__eyebrow">2024-Present</p>
-          <h3>PhD in Machine Learning</h3>
-          <p>Georgia Tech</p>
+          <img class="entity-logo" src="/images/Georgia-Tech-Logo.jpg" alt="" onerror="this.hidden=true">
+          <div>
+            <p class="info-card__eyebrow">2024-Present</p>
+            <h3>PhD in Machine Learning</h3>
+            <p>Georgia Tech (ISyE)</p>
+          </div>
         </article>
         <article class="rail-card">
-          <p class="info-card__eyebrow">2022-2024</p>
-          <h3>MASc in Industrial Engineering</h3>
-          <p>University of Toronto</p>
+          <img class="entity-logo" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
+          <div>
+            <p class="info-card__eyebrow">2022-2024</p>
+            <h3>MASc in Industrial Engineering</h3>
+            <p>University of Toronto</p>
+          </div>
         </article>
         <article class="rail-card">
-          <p class="info-card__eyebrow">2018-2022</p>
-          <h3>BASc in Engineering Science</h3>
-          <p>Machine Intelligence, University of Toronto</p>
+          <img class="entity-logo" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
+          <div>
+            <p class="info-card__eyebrow">2018-2022</p>
+            <h3>BASc in Engineering Science</h3>
+            <p>Machine Learning, University of Toronto</p>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="rail-section">
-      <h2>Research Interests</h2>
-      <div class="tag-list tag-list--rail">
-        <span>Machine learning for optimization</span>
-        <span>Operations research</span>
-        <span>Large-scale optimization</span>
-        <span>Discrete optimization</span>
-        <span>Optimization solvers</span>
-        <span>Supply chain, logistics, and manufacturing</span>
+      <h2>Experience</h2>
+      <div class="rail-list">
+        <article class="rail-card">
+          <img class="entity-logo" src="/images/amazon_logo.jpeg" alt="" onerror="this.hidden=true">
+          <div>
+            <p class="info-card__eyebrow">Fall 2026</p>
+            <h3>Incoming Applied Scientist</h3>
+            <p>Amazon</p>
+          </div>
+        </article>
+        <article class="rail-card">
+          <img class="entity-logo" src="/images/Salesforce%20Logo.jpeg" alt="" onerror="this.hidden=true">
+          <div>
+            <p class="info-card__eyebrow">Summer 2026</p>
+            <h3>Applied Scientist</h3>
+            <p>Salesforce</p>
+          </div>
+        </article>
+        <article class="rail-card">
+          <img class="entity-logo" src="/images/Georgia-Tech-Logo.jpg" alt="" onerror="this.hidden=true">
+          <div>
+            <p class="info-card__eyebrow">2024-Present</p>
+            <h3>Graduate Researcher</h3>
+            <p>AI Institute for Advances in Optimization</p>
+          </div>
+        </article>
+        <article class="rail-card">
+          <img class="entity-logo" src="/images/Huawei_Standard_logo.svg" alt="" onerror="this.hidden=true">
+          <div>
+            <p class="info-card__eyebrow">Summer 2023</p>
+            <h3>Research Engineer</h3>
+            <p>Huawei Technologies Canada</p>
+          </div>
+        </article>
       </div>
     </section>
   </aside>
