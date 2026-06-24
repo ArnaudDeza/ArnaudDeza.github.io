@@ -38,14 +38,14 @@
 @media (min-width: 1024px) {
   .page--home .page__inner-wrap {
     width: calc(100% + 12rem);
-    max-width: 63rem;
+    max-width: 64rem;
   }
 }
 
 .home-layout {
   display: grid;
-  grid-template-columns: minmax(30rem, 38rem) minmax(18rem, 19.5rem);
-  gap: 1.5rem;
+  grid-template-columns: minmax(30rem, 38rem) 20rem;
+  gap: 1rem;
   align-items: start;
 }
 
