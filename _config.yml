@@ -31,6 +31,13 @@ author:
   employer         : "Georgia Tech"
   uri              : # URL
   email            : "adeza3@gatech.edu" # Updated with my Georgia Tech email
+  research_interests:
+    - "Machine Learning"
+    - "Large Language Models"
+    - "Operations Research"
+    - "Large-scale Optimization"
+    - "Discrete Optimization"
+    - "Optimization Solvers"
 
   # Academic websites
   academia         : # URL

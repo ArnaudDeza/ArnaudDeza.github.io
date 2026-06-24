@@ -16,18 +16,6 @@ redirect_from:
 
     <p>During my MASc, I was fortunate to intern at Huawei Technologies Canada, in the Vancouver Research Centre. During my internship I worked on integrating machine learning into discrete optimization solver subroutines where I was supervised by <a href="https://scholar.google.com/citations?user=K2zamrwAAAAJ&amp;hl=en">Yong Zhang</a> and <a href="https://scholar.google.com/citations?user=2fKv_JQAAAAJ&amp;hl=en">Zirui Zhou</a>.</p>
 
-    <section class="home-section">
-      <h2>Research Interests</h2>
-      <div class="tag-list">
-        <span>Machine Learning</span>
-        <span>Large Language Models</span>
-        <span>Operations Research</span>
-        <span>Large-scale Optimization</span>
-        <span>Discrete Optimization</span> 
-        <span>Optimization Solvers</span> 
-      </div>
-    </section>
-
     <section class="home-section home-news">
       <h2>News</h2>
       <div class="news-filter" aria-label="Filter news by year">
