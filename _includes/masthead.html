@@ -15,6 +15,16 @@
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
+          <li class="masthead__menu-item masthead__palette persist tail">
+            <label class="screen-reader-text" for="palette-select">Color theme</label>
+            <select id="palette-select" aria-label="Color theme">
+              <option value="default">Default</option>
+              <option value="sage">Sage</option>
+              <option value="ocean">Ocean</option>
+              <option value="plum">Plum</option>
+              <option value="sand">Sand</option>
+            </select>
+          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>
