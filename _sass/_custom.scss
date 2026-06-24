@@ -36,19 +36,15 @@
   background: var(--global-bg-color);
 }
 
-.publication-card__meta,
-.publication-card__links {
+.publication-card__meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
-}
-
-.publication-card__meta {
   margin-bottom: 0.55rem;
 }
 
 .publication-card__meta span,
-.publication-card__links a {
+.publication-card__meta a {
   border: 1px solid var(--global-border-color);
   border-radius: 999px;
   padding: 0.24rem 0.55rem;
@@ -78,11 +74,7 @@
   line-height: 1.45;
 }
 
-.publication-card__links {
-  margin-top: 0.75rem;
-}
-
-.publication-card__links a {
+.publication-card__meta a {
   color: var(--global-link-color);
   text-decoration: none;
 }
