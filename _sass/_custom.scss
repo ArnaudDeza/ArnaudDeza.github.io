@@ -156,14 +156,14 @@ html[data-palette="sand"] {
 
 @media (min-width: 1024px) {
   .page--home .page__inner-wrap {
-    width: calc(100% + 12rem);
-    max-width: 64rem;
+    width: calc(100% + 20rem);
+    max-width: 72rem;
   }
 }
 
 .home-layout {
   display: grid;
-  grid-template-columns: minmax(30rem, 38rem) 20rem;
+  grid-template-columns: minmax(30rem, 38rem) minmax(24rem, 26rem);
   gap: 1rem;
   align-items: start;
 }
