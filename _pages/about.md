@@ -29,7 +29,7 @@ redirect_from:
       <div class="news-scroll" aria-label="Recent news">
         <article class="news-item" data-year="2026">
           <time datetime="2026-05">May 2026</time>
-          <p>I started a summer internship as an Applied Scientist at Salesforce in San Francisco.</p>
+          <p>I moved to San Francisco for the summer to intern at Salesforce as an Applied Scientist!</p>
         </article>
         <article class="news-item" data-year="2026">
           <time datetime="2026-05">May 2026</time>
