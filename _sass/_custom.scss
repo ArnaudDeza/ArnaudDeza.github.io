@@ -198,6 +198,18 @@ html:not([data-theme="dark"])[data-palette="sand"] {
 }
 
 @media (min-width: 1024px) {
+  .page--home .sidebar {
+    width: 18%;
+    max-width: 280px;
+  }
+
+  .page--home .page {
+    width: 78%;
+    padding-left: 2.5%;
+  }
+}
+
+@media (min-width: 1024px) {
   .page--home .page__inner-wrap {
     width: calc(100% + 14rem);
     max-width: 70rem;
