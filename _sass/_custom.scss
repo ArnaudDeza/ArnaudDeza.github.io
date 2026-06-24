@@ -80,6 +80,7 @@
 .home-rail {
   position: sticky;
   top: 5rem;
+  margin-top: -2rem;
 }
 
 .rail-section {
@@ -458,6 +459,7 @@
 
   .home-rail {
     position: static;
+    margin-top: 0;
   }
 
   .rail-section {
