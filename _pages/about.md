@@ -48,7 +48,7 @@ redirect_from:
         </article>
         <article class="news-item" data-year="2025">
           <time datetime="2025-10">October 2025</time>
-          <p>Attended INFORMS 2025 in Atlanta Georgia</p>
+          <p>Attended <a href="https://meetings.informs.org/wordpress/annual2025/g">INFORMS 2025</a> in Atlanta Georgia</p>
         </article>
         <article class="news-item" data-year="2025">
           <time datetime="2025-07">July 2025</time>
@@ -72,11 +72,11 @@ redirect_from:
         </article>
         <article class="news-item" data-year="2023">
           <time datetime="2023-10">October 2023</time>
-          <p>I presented our work and attended INFORMS 2023 in Pheonix, Arizona.</p>
+          <p>I presented our work and attended <a href="https://meetings.informs.org/wordpress/phoenix2023/">INFORMS 2023</a> in Pheonix, Arizona.</p>
         </article>
         <article class="news-item" data-year="2023">
           <time datetime="2023-08">August 2023</time>
-          <p>I attended CP 2023 in Toronto, Canada.</p>
+          <p>I attended <a href="https://cp2023.a4cp.org/">CP 2023</a> in Toronto, Canada.</p>
         </article>
         <article class="news-item" data-year="2023">
           <time datetime="2023-05">May 2023</time>
@@ -84,7 +84,7 @@ redirect_from:
         </article>
         <article class="news-item" data-year="2023">
           <time datetime="2023-05">May 2023</time>
-          <p>Our paper <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol280-cp2023/LIPIcs.CP.2023.14/LIPIcs.CP.2023.14.pdf">"Fast Matrix Multiplication Without Tears: A Constraint Programming Approach"</a> was accepted to CP 2023.</p>
+          <p>Our paper <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol280-cp2023/LIPIcs.CP.2023.14/LIPIcs.CP.2023.14.pdf">"Fast Matrix Multiplication Without Tears: A Constraint Programming Approach"</a> was accepted to <a href="https://cp2023.a4cp.org/">CP 2023</a>.</p>
         </article>
         <article class="news-item" data-year="2023">
           <time datetime="2023-02">February 2023</time>
