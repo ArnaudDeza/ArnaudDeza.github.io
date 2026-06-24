@@ -53,7 +53,7 @@ redirect_from:
         </article>
         <article class="news-item" data-year="2024">
           <time datetime="2024-08">August 2024</time>
-          <p>Started my PhD in Machine Learning at Georgia Tech and joined AI4OPT.</p>
+          <p>Started my PhD in Machine Learning at Georgia Institute of Technology and joined AI4OPT.</p>
         </article>
         <article class="news-item" data-year="2024">
           <time datetime="2024-08">August 2024</time>
@@ -121,7 +121,7 @@ redirect_from:
           <div>
             <p class="info-card__eyebrow">2024-Present</p>
             <h3>PhD in Machine Learning</h3>
-            <p>Georgia Tech (ISyE)</p>
+            <p>Georgia Institute of Technology (ISyE)</p>
           </div>
         </article>
         <article class="rail-card">

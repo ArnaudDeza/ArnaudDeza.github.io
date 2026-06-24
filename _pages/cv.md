@@ -19,7 +19,7 @@ redirect_from:
       <div>
         <p class="cv-entry__date">2024-Present</p>
         <h3>PhD in Machine Learning</h3>
-        <p>Georgia Tech (ISyE)</p>
+        <p>Georgia Institute of Technology (ISyE)</p>
       </div>
     </div>
     <div class="cv-entry">
@@ -93,7 +93,7 @@ redirect_from:
     <div class="cv-entry cv-entry--plain">
       <div>
         <h3>ISyE Presidential Herren Fellowship</h3>
-        <p>Georgia Tech</p>
+        <p>Georgia Institute of Technology</p>
       </div>
     </div>
     <div class="cv-entry cv-entry--plain">

@@ -13,7 +13,7 @@ hide_footer              : true
 title                    : "Arnaud Deza"
 title_separator          : "-"
 name                     : &name "Arnaud Deza"
-description              : &description "Academic portfolio of Arnaud Deza, PhD student in Machine Learning at Georgia Tech."   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Academic portfolio of Arnaud Deza, PhD student in Machine Learning at Georgia Institute of Technology."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://arnauddeza.github.io/ # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -27,11 +27,11 @@ author:
   avatar           : "profile_dez.png"
   name             : "Arnaud Deza"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Student in Machine Learning at Georgia Tech | AI4OPT"
+  bio              : "PhD Student in Machine Learning at Georgia Institute of Technology | AI4OPT"
   location         : "San Francisco, California"
-  employer         : "Georgia Tech"
+  employer         : "Georgia Institute of Technology"
   uri              : # URL
-  email            : "adeza3@gatech.edu" # Updated with my Georgia Tech email
+  email            : "adeza3@gatech.edu" # Updated with my Georgia Institute of Technology email
   research_interests:
     - "Machine Learning"
     - "Large Language Models"

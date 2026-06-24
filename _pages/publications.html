@@ -37,7 +37,8 @@ archive_class: archive--publications
         </p>
       {% endif %}
       {% if post.citation %}
-        <p class="publication-card__citation">{{ post.citation }}</p>
+        {% assign highlighted_citation = post.citation | replace: "Deza, A.", "<strong>Deza, A.</strong>" | replace: "Arnaud Deza", "<strong>Arnaud Deza</strong>" %}
+        <p class="publication-card__citation">{{ highlighted_citation }}</p>
       {% endif %}
     </article>
   {% endfor %}
