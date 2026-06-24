@@ -5,7 +5,7 @@
     default: "#ffffff",
     sage: "#f7faf4",
     ocean: "#f6fbff",
-    plum: "#fbf8fc",
+    slate: "#f7f9fb",
     sand: "#fffaf0"
   };
 

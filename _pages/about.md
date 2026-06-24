@@ -24,6 +24,7 @@ redirect_from:
         <button type="button" class="news-filter__button" data-news-filter="2025" aria-pressed="false">2025</button>
         <button type="button" class="news-filter__button" data-news-filter="2024" aria-pressed="false">2024</button>
         <button type="button" class="news-filter__button" data-news-filter="2023" aria-pressed="false">2023</button>
+        <button type="button" class="news-filter__button" data-news-filter="2022" aria-pressed="false">2022</button>
       </div>
       <div class="news-scroll" aria-label="Recent news">
         <article class="news-item" data-year="2026">
