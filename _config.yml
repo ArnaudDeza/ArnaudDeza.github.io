@@ -9,6 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # the available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+hide_footer              : true
 title                    : "Arnaud Deza"
 title_separator          : "-"
 name                     : &name "Arnaud Deza"
