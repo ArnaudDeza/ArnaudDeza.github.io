@@ -129,7 +129,7 @@ redirect_from:
           <div>
             <p class="info-card__eyebrow">2022-2024</p>
             <h3>MASc in Industrial Engineering</h3>
-            <p>University of Toronto</p>
+            <p>University of Toronto (MIE Dept.)</p>
           </div>
         </article>
         <article class="rail-card">
