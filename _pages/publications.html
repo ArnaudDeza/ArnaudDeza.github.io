@@ -12,7 +12,36 @@ archive_class: archive--publications
 
 {% include base_path %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<div class="publication-grid">
+  {% for post in site.publications reversed %}
+    {% assign pub_year = post.date | default: "1900-01-01" | date: "%Y" %}
+    {% assign venue_lower = post.venue | downcase %}
+    <article class="publication-card">
+      <div class="publication-card__meta">
+        <span>{{ pub_year }}</span>
+        {% if post.category %}
+          <span>{{ post.category | replace: "-", " " }}</span>
+        {% endif %}
+      </div>
+      <h2>{{ post.title }}</h2>
+      {% if post.venue %}
+        <p class="publication-card__venue">
+          {% if venue_lower contains "under review" %}
+            Under Review
+          {% else %}
+            {{ post.venue }}
+          {% endif %}
+        </p>
+      {% endif %}
+      {% if post.citation %}
+        <p class="publication-card__citation">{{ post.citation }}</p>
+      {% endif %}
+      <div class="publication-card__links">
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}">Paper</a>
+        {% endif %}
+        <a href="{{ base_path }}{{ post.url }}">Details</a>
+      </div>
+    </article>
+  {% endfor %}
+</div>

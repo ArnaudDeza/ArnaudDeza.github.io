@@ -4,15 +4,15 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
+        <button class="masthead__nav-toggle" hidden aria-hidden="true"><span class="navicon"></span></button>
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
-              {% assign domain = '' %}
+              {% assign nav_url = link.url %}
             {% else %}
-              {% assign domain = base_path %}
+              {% assign nav_url = link.url | relative_url %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item persist"><a href="{{ nav_url }}">{{ link.title }}</a></li>
           {% endfor %}
           <li class="masthead__menu-item masthead__palette persist tail">
             <label class="screen-reader-text" for="palette-select">Color theme</label>
