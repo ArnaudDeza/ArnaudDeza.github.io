@@ -113,34 +113,35 @@
 
 .teaching-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
 }
 
 .teaching-card,
 .teaching-feature {
   border: 1px solid var(--global-border-color);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.7rem 0.85rem;
   background: var(--global-bg-color);
 }
 
 .teaching-card__term {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.25rem;
   color: var(--global-text-color-light);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
 .teaching-card h3 {
-  margin: 0 0 0.25rem;
-  font-size: 1.05rem;
+  margin: 0 0 0.15rem;
+  font-size: 0.98rem;
 }
 
 .teaching-card p {
-  margin: 0.15rem 0 0.65rem;
+  margin: 0.1rem 0 0.4rem;
+  line-height: 1.35;
 }
 
 .teaching-card span,
@@ -148,9 +149,9 @@
   display: inline-block;
   border: 1px solid var(--global-border-color);
   border-radius: 999px;
-  padding: 0.24rem 0.55rem;
+  padding: 0.2rem 0.48rem;
   color: var(--global-text-color-light);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -400,6 +401,7 @@ html:not([data-theme="dark"])[data-palette="sand"] {
 
 .author__interests {
   margin-top: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 .author__interests h3 {
