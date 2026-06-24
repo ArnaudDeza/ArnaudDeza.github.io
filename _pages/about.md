@@ -17,7 +17,7 @@ redirect_from:
     <p>During my MASc, I was fortunate to intern at Huawei Technologies Canada, in the Vancouver Research Centre. During my internship I worked on integrating machine learning into discrete optimization solver subroutines where I was supervised by <a href="https://scholar.google.com/citations?user=K2zamrwAAAAJ&amp;hl=en">Yong Zhang</a> and <a href="https://scholar.google.com/citations?user=2fKv_JQAAAAJ&amp;hl=en">Zirui Zhou</a>.</p>
 
     <section class="home-section home-news">
-      <h2>News</h2>
+      <h2>News and Updates</h2>
       <div class="news-filter" aria-label="Filter news by year">
         <button type="button" class="news-filter__button is-active" data-news-filter="all" aria-pressed="true">All</button>
         <button type="button" class="news-filter__button" data-news-filter="2026" aria-pressed="false">2026</button>
