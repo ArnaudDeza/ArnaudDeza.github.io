@@ -54,6 +54,16 @@
 .masthead__palette {
   display: inline-flex;
   align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.35rem;
+}
+
+.masthead__palette-label {
+  color: var(--global-text-color-light);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .masthead__palette select {
@@ -156,16 +166,29 @@ html[data-palette="sand"] {
 
 @media (min-width: 1024px) {
   .page--home .page__inner-wrap {
-    width: calc(100% + 20rem);
-    max-width: 72rem;
+    width: calc(100% + 24rem);
+    max-width: 76rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page--home .page__inner-wrap {
+    width: calc(100% + 36rem);
+    max-width: 88rem;
   }
 }
 
 .home-layout {
   display: grid;
-  grid-template-columns: minmax(30rem, 38rem) minmax(24rem, 26rem);
+  grid-template-columns: minmax(30rem, 38rem) minmax(26rem, 28rem);
   gap: 1rem;
   align-items: start;
+}
+
+@media (min-width: 1280px) {
+  .home-layout {
+    grid-template-columns: minmax(30rem, 38rem) minmax(34rem, 38rem);
+  }
 }
 
 .home-main > p:first-child {

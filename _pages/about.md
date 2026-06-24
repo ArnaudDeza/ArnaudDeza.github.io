@@ -78,6 +78,10 @@ redirect_from:
           <time datetime="2023-02">February 2023</time>
           <p>Our paper <a href="https://doi.org/10.24963/ijcai.2023/739">"Machine Learning for Cutting Planes in Integer Programming: A Survey"</a> was accepted to IJCAI 2023.</p>
         </article>
+        <article class="news-item" data-year="2022">
+          <time datetime="2022-08">August 2022</time>
+          <p>Started my MaSC at the University of Toronto in the MIE department!</p>
+        </article>
       </div>
     </section>
 
