@@ -4,26 +4,13 @@ title: "CV"
 permalink: /cv/
 author_profile: true
 archive_class: archive--cv
+hide_title: true
 redirect_from:
   - /resume
 ---
 
 <section class="cv-hero">
   <p>My work sits at the intersection of machine learning, optimization, and decision-making systems, with a focus on large-scale optimization for supply chain, logistics, manufacturing, and solver workflows.</p>
-  <div class="cv-quick-grid">
-    <article>
-      <strong>Current Role</strong>
-      <span>PhD Student in Machine Learning, Georgia Tech</span>
-    </article>
-    <article>
-      <strong>Research Home</strong>
-      <span>AI Institute for Advances in Optimization</span>
-    </article>
-    <article>
-      <strong>Contact</strong>
-      <span><a href="mailto:adeza3@gatech.edu">adeza3@gatech.edu</a></span>
-    </article>
-  </div>
 </section>
 
 <section class="cv-panel cv-panel--wide">

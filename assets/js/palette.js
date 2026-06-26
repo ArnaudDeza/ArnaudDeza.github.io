@@ -6,7 +6,32 @@
     sage: "#f7faf4",
     ocean: "#f6fbff",
     slate: "#f7f9fb",
-    sand: "#fffaf0"
+    sand: "#fffaf0",
+    rose: "#fff7f8",
+    coral: "#fff7f3",
+    tangerine: "#fff8ed",
+    amber: "#fffbea",
+    honey: "#fbf8e8",
+    olive: "#f7faee",
+    moss: "#f4faf0",
+    pine: "#f2faf5",
+    teal: "#f1fbfa",
+    aqua: "#f0fbff",
+    sky: "#f3f9ff",
+    cobalt: "#f5f8ff",
+    indigo: "#f7f7ff",
+    violet: "#faf7ff",
+    plum: "#fcf7ff",
+    magenta: "#fff6fc",
+    ruby: "#fff6f6",
+    graphite: "#f8f8f7",
+    zinc: "#f8f9fb",
+    pearl: "#fbfaf7",
+    lagoon: "#f2fbf8",
+    denim: "#f4f8fc",
+    orchid: "#fcf7fd",
+    copper: "#fff8f2",
+    espresso: "#fbf7f3"
   };
 
   function isValidPalette(value) {
