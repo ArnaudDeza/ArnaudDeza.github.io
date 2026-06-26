@@ -12,11 +12,23 @@ archive_class: archive--publications
 
 {% include base_path %}
 
+{% assign publication_years = "" %}
+<div class="publication-filter" aria-label="Filter publications by year">
+  <button type="button" class="publication-filter__button is-active" data-publication-filter="all" aria-pressed="true">All</button>
+  {% for post in site.publications reversed %}
+    {% assign pub_year = post.date | default: "1900-01-01" | date: "%Y" %}
+    {% unless publication_years contains pub_year %}
+      <button type="button" class="publication-filter__button" data-publication-filter="{{ pub_year }}" aria-pressed="false">{{ pub_year }}</button>
+      {% assign publication_years = publication_years | append: pub_year | append: "," %}
+    {% endunless %}
+  {% endfor %}
+</div>
+
 <div class="publication-grid">
   {% for post in site.publications reversed %}
     {% assign pub_year = post.date | default: "1900-01-01" | date: "%Y" %}
     {% assign venue_lower = post.venue | downcase %}
-    <article class="publication-card">
+    <article class="publication-card" data-publication-year="{{ pub_year }}">
       <div class="publication-card__meta">
         <span>{{ pub_year }}</span>
         {% if post.category %}
@@ -25,7 +37,15 @@ archive_class: archive--publications
         {% if post.paperurl %}
           <a href="{{ post.paperurl }}">Paper</a>
         {% endif %}
+        {% if post.bibtex %}
+          <button type="button" class="publication-card__bibtex" data-bibtex-target="publication-bibtex-{{ forloop.index }}">BibTeX</button>
+        {% elsif post.bibtexurl %}
+          <a href="{{ post.bibtexurl }}">BibTeX</a>
+        {% endif %}
       </div>
+      {% if post.bibtex %}
+        <script type="application/x-bibtex" id="publication-bibtex-{{ forloop.index }}">{{ post.bibtex | strip }}</script>
+      {% endif %}
       <h2>{{ post.title }}</h2>
       {% if post.venue %}
         <p class="publication-card__venue">
@@ -43,3 +63,52 @@ archive_class: archive--publications
     </article>
   {% endfor %}
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll("[data-publication-filter]");
+    const publicationCards = document.querySelectorAll(".publication-card[data-publication-year]");
+    const bibtexButtons = document.querySelectorAll("[data-bibtex-target]");
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const selectedYear = button.getAttribute("data-publication-filter");
+
+        filterButtons.forEach(function (candidate) {
+          const isActive = candidate === button;
+          candidate.classList.toggle("is-active", isActive);
+          candidate.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+
+        publicationCards.forEach(function (card) {
+          const shouldShow = selectedYear === "all" || card.getAttribute("data-publication-year") === selectedYear;
+          card.hidden = !shouldShow;
+        });
+      });
+    });
+
+    bibtexButtons.forEach(function (button) {
+      button.addEventListener("click", async function () {
+        const bibtexSource = document.getElementById(button.getAttribute("data-bibtex-target"));
+        const originalLabel = button.textContent;
+
+        if (!bibtexSource) {
+          return;
+        }
+
+        try {
+          await navigator.clipboard.writeText(bibtexSource.textContent.trim());
+          button.textContent = "Copied";
+          window.setTimeout(function () {
+            button.textContent = originalLabel;
+          }, 1400);
+        } catch (error) {
+          button.textContent = "Copy failed";
+          window.setTimeout(function () {
+            button.textContent = originalLabel;
+          }, 1400);
+        }
+      });
+    });
+  });
+</script>

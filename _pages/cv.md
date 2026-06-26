@@ -64,7 +64,9 @@ redirect_from:
       </div>
     </article>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/Salesforce%20Logo.jpeg" alt="" onerror="this.hidden=true">
+      <span class="entity-logo entity-logo--salesforce-frame">
+        <img src="/images/Salesforce%20Logo.jpeg" alt="" onerror="this.parentElement.hidden=true">
+      </span>
       <div>
         <p class="cv-entry__date">Summer 2026</p>
         <h3>Applied Scientist</h3>

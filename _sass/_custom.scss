@@ -48,11 +48,56 @@ html:not([data-theme="dark"]) {
   margin-top: 0.8rem;
 }
 
+.publication-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0 0.9rem;
+  padding: 0.25rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  width: fit-content;
+  background: var(--global-bg-color);
+}
+
+.publication-filter__button,
+.publication-card__bibtex {
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--global-text-color);
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.publication-filter__button {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.82rem;
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.publication-filter__button:hover,
+.publication-filter__button:focus {
+  background: var(--global-border-color);
+  outline: 0;
+}
+
+.publication-filter__button.is-active {
+  background: var(--global-text-color);
+  color: var(--global-bg-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+}
+
 .publication-card {
   border: 1px solid var(--global-border-color);
   border-radius: 8px;
   padding: 0.78rem 0.85rem;
   background: var(--global-bg-color);
+}
+
+.publication-card[hidden] {
+  display: none !important;
 }
 
 .publication-card__meta {
@@ -63,7 +108,8 @@ html:not([data-theme="dark"]) {
 }
 
 .publication-card__meta span,
-.publication-card__meta a {
+.publication-card__meta a,
+.publication-card__bibtex {
   border: 1px solid var(--global-border-color);
   border-radius: 999px;
   padding: 0.18rem 0.48rem;
@@ -96,6 +142,17 @@ html:not([data-theme="dark"]) {
 .publication-card__meta a {
   color: var(--global-link-color);
   text-decoration: none;
+}
+
+.publication-card__bibtex {
+  background: var(--global-bg-color);
+  color: var(--global-link-color);
+}
+
+.publication-card__bibtex:hover,
+.publication-card__bibtex:focus {
+  border-color: var(--global-link-color);
+  outline: 0;
 }
 
 .archive--teaching {
@@ -400,6 +457,21 @@ html:not([data-theme="dark"]) {
   border-radius: 6px;
   padding: 0.2rem;
   background: #fff;
+}
+
+.entity-logo--salesforce-frame {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+}
+
+.entity-logo--salesforce-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.75);
+  transform-origin: center;
 }
 
 .home-section h2 {
