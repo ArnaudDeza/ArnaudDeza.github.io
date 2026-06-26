@@ -13,12 +13,12 @@ archive_class: archive--publications
 {% include base_path %}
 
 {% assign publication_years = "" %}
-<div class="publication-filter" aria-label="Filter publications by year">
-  <button type="button" class="publication-filter__button is-active" data-publication-filter="all" aria-pressed="true">All</button>
+<div class="publication-filter news-filter" aria-label="Filter publications by year">
+  <button type="button" class="publication-filter__button news-filter__button is-active" data-publication-filter="all" aria-pressed="true">All</button>
   {% for post in site.publications reversed %}
     {% assign pub_year = post.date | default: "1900-01-01" | date: "%Y" %}
     {% unless publication_years contains pub_year %}
-      <button type="button" class="publication-filter__button" data-publication-filter="{{ pub_year }}" aria-pressed="false">{{ pub_year }}</button>
+      <button type="button" class="publication-filter__button news-filter__button" data-publication-filter="{{ pub_year }}" aria-pressed="false">{{ pub_year }}</button>
       {% assign publication_years = publication_years | append: pub_year | append: "," %}
     {% endunless %}
   {% endfor %}
@@ -65,7 +65,8 @@ archive_class: archive--publications
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  (function () {
+    function initializePublicationControls() {
     const filterButtons = document.querySelectorAll("[data-publication-filter]");
     const publicationCards = document.querySelectorAll(".publication-card[data-publication-year]");
     const bibtexButtons = document.querySelectorAll("[data-bibtex-target]");
@@ -110,5 +111,12 @@ archive_class: archive--publications
         }
       });
     });
-  });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initializePublicationControls);
+    } else {
+      initializePublicationControls();
+    }
+  })();
 </script>
