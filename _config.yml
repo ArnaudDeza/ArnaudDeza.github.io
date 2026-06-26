@@ -156,9 +156,12 @@ og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Person
+  name                   : "Arnaud Deza"
   links: # An array of links to social media profiles
+    - "https://github.com/ArnaudDeza/"
+    - "https://scholar.google.com/citations?user=Lg-EG54AAAAJ"
+    - "https://www.isye.gatech.edu/users/arnaud-deza"
 
 
 # Analytics
@@ -194,10 +197,16 @@ exclude:
   - LICENSE
   - local
   - log
+  - markdown_generator
   - node_modules
   - package.json*
   - Rakefile
   - README
+  - talkmap
+  - talkmap.ipynb
+  - talkmap.py
+  - talkmap_out.ipynb
+  - todo.md
   - tmp
   - vendor
 keep_files:
@@ -230,16 +239,16 @@ kramdown:
 # These settings control the types of collections used by the template
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 

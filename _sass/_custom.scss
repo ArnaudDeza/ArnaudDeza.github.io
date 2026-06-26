@@ -375,15 +375,14 @@ html:not([data-theme="dark"])[data-palette="sand"] {
 
 @media (min-width: 1024px) {
   .page--home .page__inner-wrap {
-    width: calc(100% + 14rem);
-    max-width: 70rem;
+    width: 100%;
+    max-width: 48rem;
   }
 }
 
 @media (min-width: 1280px) {
   .page--home .page__inner-wrap {
-    width: calc(100% + 18rem);
-    max-width: 74rem;
+    max-width: 50rem;
   }
 }
 
@@ -402,6 +401,10 @@ html:not([data-theme="dark"])[data-palette="sand"] {
 
 .home-main {
   font-size: 0.94rem;
+}
+
+.home-main--focused {
+  max-width: 48rem;
 }
 
 .home-main > p:first-child {

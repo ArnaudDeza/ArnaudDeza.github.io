@@ -3,5 +3,6 @@ layout: archive
 title: "Blog"
 permalink: /blog/
 author_profile: true
+sitemap: false
+noindex: true
 ---
-

@@ -8,9 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-<div class="home-layout">
-  <main class="home-main">
-    <p>I am currently a second year PhD student in the Machine Learning program at Georgia Tech supervised by <a href="https://scholar.google.com/citations?user=GxFQz-4AAAAJ&amp;hl=en">Pascal Van Hentenryck</a>. At Georgia Tech, I am a part of the <a href="https://www.ai4opt.org/">National Science Foundation AI Research Institute for Advances in Optimization</a> where I work on machine learning for large scale optimization in supply chain, logistics and manufacturing. I am grateful to be funded by the ISyE Presidential Herren Fellowship.</p>
+<div class="home-main home-main--focused">
+  <p>I am currently a second year PhD student in the Machine Learning program at Georgia Tech supervised by <a href="https://scholar.google.com/citations?user=GxFQz-4AAAAJ&amp;hl=en">Pascal Van Hentenryck</a>. At Georgia Tech, I am a part of the <a href="https://www.ai4opt.org/">National Science Foundation AI Research Institute for Advances in Optimization</a> where I work on machine learning for large scale optimization in supply chain, logistics and manufacturing. I am grateful to be funded by the ISyE Presidential Herren Fellowship.</p>
 
     <p>Prior to Georgia Tech, I completed a MASc at the University of Toronto in the Industrial Engineering Department under the supervision of <a href="https://scholar.google.com/citations?user=juqDWQMAAAAJ&amp;hl=en">Elias Khalil</a> funded by an NSERC CGS-M. During this time I worked at the intersection of machine learning, discrete optimization and optimization solvers.</p>
 
@@ -110,75 +109,4 @@ redirect_from:
       });
     </script>
 
-  </main>
-
-  <aside class="home-rail" aria-label="Profile highlights">
-    <section class="rail-section">
-      <h2>Education</h2>
-      <div class="rail-list">
-        <article class="rail-card">
-          <img class="entity-logo" src="/images/Georgia-Tech-Logo.jpg" alt="" onerror="this.hidden=true">
-          <div>
-            <p class="info-card__eyebrow">2024-Present</p>
-            <h3>PhD in Machine Learning</h3>
-            <p>Georgia Institute of Technology (ISyE)</p>
-          </div>
-        </article>
-        <article class="rail-card">
-          <img class="entity-logo" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
-          <div>
-            <p class="info-card__eyebrow">2022-2024</p>
-            <h3>MASc in Industrial Engineering</h3>
-            <p>University of Toronto (MIE Dept.)</p>
-          </div>
-        </article>
-        <article class="rail-card">
-          <img class="entity-logo" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
-          <div>
-            <p class="info-card__eyebrow">2018-2022</p>
-            <h3>BASc in Engineering Science</h3>
-            <p>Machine Learning, University of Toronto</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="rail-section">
-      <h2>Experience</h2>
-      <div class="rail-list">
-        <article class="rail-card">
-          <img class="entity-logo" src="/images/amazon_logo.jpeg" alt="" onerror="this.hidden=true">
-          <div>
-            <p class="info-card__eyebrow">Fall 2026</p>
-            <h3>Incoming Applied Scientist</h3>
-            <p>Amazon</p>
-          </div>
-        </article>
-        <article class="rail-card">
-          <img class="entity-logo" src="/images/Salesforce%20Logo.jpeg" alt="" onerror="this.hidden=true">
-          <div>
-            <p class="info-card__eyebrow">Summer 2026</p>
-            <h3>Applied Scientist</h3>
-            <p>Salesforce</p>
-          </div>
-        </article>
-        <article class="rail-card">
-          <img class="entity-logo" src="/images/AI4OPT-Logo-2.png" alt="" onerror="this.hidden=true">
-          <div>
-            <p class="info-card__eyebrow">2024-Present</p>
-            <h3>Graduate Researcher</h3>
-            <p>AI Institute for Advances in Optimization</p>
-          </div>
-        </article>
-        <article class="rail-card">
-          <img class="entity-logo" src="/images/Huawei_Standard_logo.svg" alt="" onerror="this.hidden=true">
-          <div>
-            <p class="info-card__eyebrow">Summer 2023</p>
-            <h3>Research Engineer</h3>
-            <p>Huawei Technologies Canada</p>
-          </div>
-        </article>
-      </div>
-    </section>
-  </aside>
 </div>

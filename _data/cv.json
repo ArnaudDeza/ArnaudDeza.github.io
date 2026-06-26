@@ -1,152 +1,185 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Arnaud Deza",
+    "email": "adeza3@gatech.edu",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://arnauddeza.github.io/",
+    "summary": "PhD student in Machine Learning at Georgia Institute of Technology working on machine learning for large-scale optimization, discrete optimization, and optimization solver workflows.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "San Francisco",
       "countryCode": "US",
-      "region": ""
+      "region": "California"
     },
     "profiles": [
       {
         "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
+        "username": "Arnaud Deza",
+        "url": "https://scholar.google.com/citations?user=Lg-EG54AAAAJ"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "ArnaudDeza",
+        "url": "https://github.com/ArnaudDeza/"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "Amazon",
+      "position": "Incoming Applied Scientist",
+      "startDate": "2026",
+      "endDate": "2026",
+      "summary": "Incoming Fall 2026 applied scientist role.",
+      "highlights": []
+    },
+    {
+      "company": "Salesforce",
+      "position": "Applied Scientist",
+      "startDate": "2026",
+      "endDate": "2026",
+      "summary": "Summer 2026 applied scientist internship.",
+      "highlights": []
+    },
+    {
+      "company": "AI Institute for Advances in Optimization",
+      "position": "Graduate Researcher",
+      "startDate": "2024",
+      "endDate": "Present",
+      "summary": "Research on machine learning for large-scale optimization in supply chain, logistics, and manufacturing.",
+      "highlights": []
+    },
+    {
+      "company": "Huawei Technologies Canada",
+      "position": "Research Engineer",
+      "startDate": "2023",
+      "endDate": "2023",
+      "summary": "Worked on integrating machine learning into discrete optimization solver subroutines at the Vancouver Research Centre.",
+      "highlights": []
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "Georgia Institute of Technology",
+      "area": "PhD in Machine Learning",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "startDate": "2024",
+      "endDate": "Present",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
+      "institution": "University of Toronto",
+      "area": "MASc in Industrial Engineering",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
+      "startDate": "2022",
+      "endDate": "2024",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
+      "institution": "University of Toronto",
+      "area": "BASc in Engineering Science, Machine Learning",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "startDate": "2018",
+      "endDate": "2022",
       "gpa": null,
       "courses": []
     }
   ],
-  "skills": [],
+  "skills": [
+    {
+      "name": "Research Interests",
+      "keywords": [
+        "Machine Learning",
+        "Large Language Models",
+        "Operations Research",
+        "Large-scale Optimization",
+        "Discrete Optimization",
+        "Optimization Solvers"
+      ]
+    }
+  ],
   "languages": [],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Machine Learning for Optimization",
+      "keywords": [
+        "Large-scale optimization",
+        "Discrete optimization",
+        "Optimization solvers"
+      ]
+    }
+  ],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "Democratizing Large-Scale Re-Optimization with LLM-Guided Model Patches",
+      "publisher": "Under Review",
+      "releaseDate": "2026-01-01",
+      "website": "https://arxiv.org/abs/2605.18692",
+      "summary": "Ye, T., Deza, A., Mohan, V., Er Raqabi, E. M., & Van Hentenryck, P. (2026). Under review."
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "name": "DualSchool: Robust Quantitative Evaluation of Leading LLMs on Simple OR Tasks?",
+      "publisher": "Under Review",
+      "releaseDate": "2025-01-01",
+      "website": "https://doi.org/10.48550/arXiv.2505.21775",
+      "summary": "Klamkin, M., Deza, A., Cheng, S., Zhao, H., & Van Hentenryck, P. (2025). Under review."
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
+      "name": "Learn2Aggregate: Supervised Generation of Chvatal-Gomory Cuts Using Graph Neural Networks",
+      "publisher": "AAAI",
+      "releaseDate": "2025-01-01",
+      "website": "https://doi.org/10.1609/AAAI.V39I25.34900",
+      "summary": "Deza, A., Khalil, E. B., Fan, Z., Zhou, Z., & Zhang, Y. (2025). AAAI."
     },
     {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Machine Learning for Optimization-Based Separation of Mixed-Integer Rounding Cuts",
+      "publisher": "Under Review",
+      "releaseDate": "2024-01-01",
+      "website": "https://arxiv.org/abs/2408.08449",
+      "summary": "Guaje, O., Deza, A., Kazachkov, A. M., & Khalil, E. B. (2024). Under review."
     }
   ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
+  "presentations": [],
   "teaching": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
+      "course": "MIE1622 Computational Finance and Risk Management",
+      "institution": "University of Toronto",
+      "date": "2024-01-01",
+      "role": "Graduate Teaching Assistant",
       "description": ""
     },
     {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
+      "course": "MIE1624 Introduction to Data Science & Analytics",
+      "institution": "University of Toronto",
+      "date": "2023-09-01",
+      "role": "Graduate Teaching Assistant",
+      "description": ""
+    },
+    {
+      "course": "MIE262 Deterministic Operations Research",
+      "institution": "University of Toronto",
+      "date": "2023-09-01",
+      "role": "Undergraduate Teaching Assistant",
+      "description": ""
+    },
+    {
+      "course": "MIE424 Optimization in Machine Learning",
+      "institution": "University of Toronto",
+      "date": "2023-01-01",
+      "role": "Undergraduate Teaching Assistant",
+      "description": ""
+    },
+    {
+      "course": "CSC343 Introduction to Databases",
+      "institution": "University of Toronto",
+      "date": "2023-01-01",
+      "role": "Undergraduate Teaching Assistant",
       "description": ""
     }
   ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "portfolio": []
 }

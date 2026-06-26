@@ -20,15 +20,9 @@ main:
   - title: "Teaching"
     url: /teaching/    
 
-  - title: "Software"
-    url: /software/
-
   - title: "CV"
     url: /cv/
 
-  - title: "Blog"
-    url: /blog/
-    
   #- title: "Portfolio"
   #  url: /portfolio/
         
