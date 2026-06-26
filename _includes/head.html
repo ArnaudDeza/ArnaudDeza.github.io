@@ -10,12 +10,6 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  (function() {
-    var palette = localStorage.getItem("site-palette");
-    if (palette && palette !== "default") {
-      document.documentElement.setAttribute("data-palette", palette);
-    }
-  })();
 </script>
 
 <!-- For all browsers -->
