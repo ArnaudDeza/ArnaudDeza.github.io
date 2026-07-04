@@ -26,7 +26,7 @@ redirect_from:
   <section class="cv-panel">
     <h2>Education</h2>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/Georgia-Tech-Logo.jpg" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" src="/images/GTVertical_RGB.svg" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date">2024-Present</p>
         <h3>PhD in Machine Learning</h3>
@@ -56,7 +56,7 @@ redirect_from:
   <section class="cv-panel">
     <h2>Experience</h2>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/amazon_logo.jpeg" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" src="/images/amazon-ar21.svg" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date">Fall 2026</p>
         <h3>Incoming Applied Scientist</h3>
@@ -64,7 +64,7 @@ redirect_from:
       </div>
     </article>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/Salesforce%20Logo.jpeg" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" src="/images/salesforce-2.svg" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date">Summer 2026</p>
         <h3>Applied Scientist</h3>
