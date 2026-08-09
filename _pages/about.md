@@ -1,6 +1,8 @@
 ---
 permalink: /
 title: "Arnaud Deza"
+seo_title: "Arnaud Deza - PhD Student in Machine Learning at Georgia Tech"
+description: "Arnaud Deza is a PhD student in Machine Learning at Georgia Tech researching machine learning for large-scale optimization, supply chains, logistics, and manufacturing."
 author_profile: true
 page_class: page--home
 redirect_from: 
@@ -9,7 +11,7 @@ redirect_from:
 ---
 
 <div class="home-main home-main--focused">
-  <p>I am currently a second year PhD student in the Machine Learning program at Georgia Tech supervised by <a href="https://scholar.google.com/citations?user=GxFQz-4AAAAJ&amp;hl=en">Pascal Van Hentenryck</a>. At Georgia Tech, I am a part of the <a href="https://www.ai4opt.org/">National Science Foundation AI Research Institute for Advances in Optimization</a> where I work on machine learning for large scale optimization in supply chain, logistics and manufacturing. I am grateful to be funded by the ISyE Presidential Herren Fellowship.</p>
+  <p>Arnaud Deza is a PhD student in the Machine Learning program at Georgia Tech supervised by <a href="https://scholar.google.com/citations?user=GxFQz-4AAAAJ&amp;hl=en">Pascal Van Hentenryck</a>. At Georgia Tech, I am a part of the <a href="https://www.ai4opt.org/">National Science Foundation AI Research Institute for Advances in Optimization</a> where I work on machine learning for large scale optimization in supply chain, logistics and manufacturing. I am grateful to be funded by the ISyE Presidential Herren Fellowship.</p>
 
     <p>Prior to Georgia Tech, I completed a MASc at the University of Toronto in the Industrial Engineering Department under the supervision of <a href="https://scholar.google.com/citations?user=juqDWQMAAAAJ&amp;hl=en">Elias Khalil</a> funded by an NSERC CGS-M. During this time I worked at the intersection of machine learning, discrete optimization and optimization solvers.</p>
 
