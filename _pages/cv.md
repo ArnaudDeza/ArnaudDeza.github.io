@@ -28,7 +28,7 @@ redirect_from:
     <article class="cv-entry">
       <img class="entity-logo" src="/images/GTVertical_RGB.svg" alt="" onerror="this.hidden=true">
       <div>
-        <p class="cv-entry__date">2024-Present</p>
+        <p class="cv-entry__date"><span>2024-Present</span><span class="cv-entry__location">Atlanta, GA</span></p>
         <h3>PhD in Machine Learning</h3>
         <p>Georgia Institute of Technology, ISyE</p>
         <p>Supervised by <a href="https://scholar.google.com/citations?user=GxFQz-4AAAAJ&amp;hl=en">Pascal Van Hentenryck</a>.</p>
@@ -37,7 +37,7 @@ redirect_from:
     <article class="cv-entry">
       <img class="entity-logo" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
       <div>
-        <p class="cv-entry__date">2022-2024</p>
+        <p class="cv-entry__date"><span>2022-2024</span><span class="cv-entry__location">Toronto, ON</span></p>
         <h3>MASc in Industrial Engineering</h3>
         <p>University of Toronto, MIE Department</p>
         <p>Supervised by <a href="https://scholar.google.com/citations?user=juqDWQMAAAAJ&amp;hl=en">Elias Khalil</a>.</p>
@@ -46,7 +46,7 @@ redirect_from:
     <article class="cv-entry">
       <img class="entity-logo" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
       <div>
-        <p class="cv-entry__date">2018-2022</p>
+        <p class="cv-entry__date"><span>2018-2022</span><span class="cv-entry__location">Toronto, ON</span></p>
         <h3>BASc in Engineering Science</h3>
         <p>Machine Learning, University of Toronto</p>
       </div>
@@ -74,7 +74,7 @@ redirect_from:
     <article class="cv-entry">
       <img class="entity-logo" src="/images/AI4OPT-Logo-2.png" alt="" onerror="this.hidden=true">
       <div>
-        <p class="cv-entry__date">2024-Present</p>
+        <p class="cv-entry__date"><span>2024-Present</span><span class="cv-entry__location">Atlanta, GA</span></p>
         <h3>Graduate Researcher</h3>
         <p>AI Institute for Advances in Optimization</p>
       </div>
