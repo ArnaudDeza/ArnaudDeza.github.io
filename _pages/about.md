@@ -11,11 +11,17 @@ redirect_from:
 ---
 
 <div class="home-main home-main--focused">
-  <p>Arnaud Deza is a PhD student in the Machine Learning program at Georgia Tech supervised by <a href="https://scholar.google.com/citations?user=GxFQz-4AAAAJ&amp;hl=en">Pascal Van Hentenryck</a>. At Georgia Tech, I am a part of the <a href="https://www.ai4opt.org/">National Science Foundation AI Research Institute for Advances in Optimization</a> where I work on machine learning for large scale optimization in supply chain, logistics and manufacturing. I am grateful to be funded by the ISyE Presidential Herren Fellowship.</p>
+  <p>I am a PhD student in the Machine Learning program at Georgia Tech supervised by <a href="https://scholar.google.com/citations?user=GxFQz-4AAAAJ&amp;hl=en">Pascal Van Hentenryck</a>. At Georgia Tech, I am part of the <a href="https://www.ai4opt.org/">National Science Foundation AI Research Institute for Advances in Optimization</a>, where I work on machine learning for large-scale optimization in supply chains, logistics, and manufacturing. I am grateful to be funded by the ISyE Presidential Herren Fellowship.</p>
 
     <p>Prior to Georgia Tech, I completed a MASc at the University of Toronto in the Industrial Engineering Department under the supervision of <a href="https://scholar.google.com/citations?user=juqDWQMAAAAJ&amp;hl=en">Elias Khalil</a> funded by an NSERC CGS-M. During this time I worked at the intersection of machine learning, discrete optimization and optimization solvers.</p>
 
-    <p>During my MASc, I was fortunate to intern at Huawei Technologies Canada, in the Vancouver Research Centre. During my internship I worked on integrating machine learning into discrete optimization solver subroutines where I was supervised by <a href="https://scholar.google.com/citations?user=K2zamrwAAAAJ&amp;hl=en">Yong Zhang</a> and <a href="https://scholar.google.com/citations?user=2fKv_JQAAAAJ&amp;hl=en">Zirui Zhou</a>.</p>
+    <p>During my MASc, I was fortunate to intern at Huawei Technologies Canada in the Vancouver Research Centre. During my internship, I worked on integrating machine learning into discrete optimization solver subroutines under the supervision of <a href="https://scholar.google.com/citations?user=K2zamrwAAAAJ&amp;hl=en">Yong Zhang</a> and <a href="https://scholar.google.com/citations?user=2fKv_JQAAAAJ&amp;hl=en">Zirui Zhou</a>.</p>
+
+    <div class="home-actions" aria-label="Quick links">
+      <a class="home-action" href="{{ '/publications/' | relative_url }}">View publications</a>
+      <a class="home-action" href="{{ '/cv/' | relative_url }}">View CV</a>
+      {% if site.author.googlescholar %}<a class="home-action" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
+    </div>
 
     <section class="home-section home-news">
       <h2>News and Updates</h2>
@@ -66,11 +72,11 @@ redirect_from:
         </article>
         <article class="news-item" data-year="2024">
           <time datetime="2024-08">August 2024</time>
-          <p>I succesfully defended my master's thesis.</p>
+          <p>I successfully defended my master's thesis.</p>
         </article>
         <article class="news-item" data-year="2023">
           <time datetime="2023-10">October 2023</time>
-          <p>I presented our work and attended <a href="https://meetings.informs.org/wordpress/phoenix2023/">INFORMS 2023</a> in Pheonix, Arizona.</p>
+          <p>I presented our work and attended <a href="https://meetings.informs.org/wordpress/phoenix2023/">INFORMS 2023</a> in Phoenix, Arizona.</p>
         </article>
         <article class="news-item" data-year="2023">
           <time datetime="2023-08">August 2023</time>
@@ -90,7 +96,7 @@ redirect_from:
         </article>
         <article class="news-item" data-year="2022">
           <time datetime="2022-08">August 2022</time>
-          <p>Started my MaSC at the University of Toronto in the MIE department!</p>
+          <p>Started my MASc at the University of Toronto in the MIE department!</p>
         </article>
       </div>
     </section>

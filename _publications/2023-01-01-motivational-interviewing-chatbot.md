@@ -3,7 +3,7 @@ title: "A Motivational Interviewing Chatbot With Generative Reflections for Incr
 collection: publications
 category: manuscripts
 permalink: /publication/2023-01-01-motivational-interviewing-chatbot
-excerpt: #"Iterative development study of a motivational interviewing chatbot."
+excerpt: "An iterative development study of a motivational interviewing chatbot with generative reflections."
 date: 2023-01-01
 venue: "The Journal of Medical Internet Research - Mental Health"
 paperurl: "https://doi.org/10.2196/49132"

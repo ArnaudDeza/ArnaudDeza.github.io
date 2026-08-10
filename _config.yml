@@ -24,7 +24,7 @@ repository               : "arnauddeza/ArnaudDeza.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile_dez.png"
+  avatar           : "profile_dez.jpg"
   name             : "Arnaud Deza"
   pronouns         : # example: "she/her"  
   bio              : "PhD Student in Machine Learning at Georgia Institute of Technology | AI4OPT"
@@ -37,6 +37,7 @@ author:
     - "Large Language Models"
     - "Operations Research"
     - "Large-scale Optimization"
+    - "GPU Optimization"
     - "Discrete Optimization"
     - "Optimization Solvers"
     - "Routing and Scheduling"
@@ -51,7 +52,7 @@ author:
   semantic         : # URL
   ssrn             : # URL
   pubmed           : # URL
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Arnaud-Deza" # Review link
   scopus           : # URL
   zotero           : # URL
 
@@ -75,7 +76,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "arnaud-deza-5380291a1" # Review link
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -152,17 +153,19 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "profile_dez.jpg" # Social media default site image
+og_description           : *description # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : Person
   name                   : "Arnaud Deza"
   links: # An array of links to social media profiles
-    - "https://github.com/ArnaudDeza/"
+    - "https://github.com/ArnaudDeza"
     - "https://scholar.google.com/citations?user=Lg-EG54AAAAJ"
     - "https://www.isye.gatech.edu/users/arnaud-deza"
+    - "https://www.linkedin.com/in/arnaud-deza-5380291a1" # Review link
+    - "https://www.researchgate.net/profile/Arnaud-Deza" # Review link
 
 
 # Analytics

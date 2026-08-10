@@ -6,7 +6,7 @@
 */
 
 var $nav = $('#site-nav');
-var $btn = $('#site-nav button');
+var $btn = $('#site-nav .masthead__nav-toggle');
 var $vlinks = $('#site-nav .visible-links');
 var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
 var $hlinks = $('#site-nav .hidden-links');
@@ -30,7 +30,7 @@ function updateNav() {
       availableSpace = $btn.hasClass("hidden") ? $nav.width() : $nav.width() - $btn.width() - 30;
 
       // Show the dropdown btn
-      $btn.removeClass("hidden");
+      $btn.removeClass("hidden").attr("aria-hidden", "false");
     }
 
     // The visible list is not overflowing
@@ -49,7 +49,7 @@ function updateNav() {
 
     // Hide the dropdown btn if hidden list is empty
     if (breaks.length < 1) {
-      $btn.addClass('hidden');
+      $btn.addClass('hidden').attr({"aria-hidden": "true", "aria-expanded": "false", "aria-label": "Open navigation"});
       $btn.removeClass('close');
       $hlinks.addClass('hidden');
     }
@@ -79,8 +79,12 @@ screen.orientation.addEventListener("change", function () {
 });
 
 $btn.on('click', function () {
-  $hlinks.toggleClass('hidden');
-  $(this).toggleClass('close');
+  var isOpen = !$(this).hasClass('close');
+  $hlinks.toggleClass('hidden', !isOpen);
+  $(this).toggleClass('close', isOpen).attr({
+    "aria-expanded": isOpen ? "true" : "false",
+    "aria-label": isOpen ? "Close navigation" : "Open navigation"
+  });
 });
 
 updateNav();

@@ -3,7 +3,7 @@ title: "Learn2Aggregate: Supervised Generation of Chvatal-Gomory Cuts Using Grap
 collection: publications
 category: conferences
 permalink: /publication/2025-01-01-learn2aggregate-chvatal-gomory
-excerpt: #"Supervised generation of Chvatal-Gomory cuts using graph neural networks."
+excerpt: "A graph neural network approach to supervised generation of Chvatal-Gomory cuts for mixed-integer linear programs."
 date: 2025-01-01
 venue: "Association for the Advancement of Artificial Intelligence"
 paperurl: "https://doi.org/10.1609/AAAI.V39I25.34900"

@@ -2,9 +2,9 @@
 layout: archive
 title: "CV"
 permalink: /cv/
+description: "Curriculum vitae of Arnaud Deza, a PhD student in Machine Learning at Georgia Tech working on optimization and decision-making systems."
 author_profile: true
 archive_class: archive--cv
-hide_title: true
 redirect_from:
   - /resume
 ---
@@ -12,6 +12,11 @@ redirect_from:
 <section class="cv-hero">
   <p>My work sits at the intersection of machine learning, optimization, and decision-making systems, with a focus on large-scale optimization for supply chain, logistics, manufacturing, and solver workflows.</p>
 </section>
+
+{% assign cv_pdf = site.static_files | where: "path", "/files/cv.pdf" | first %}
+{% if cv_pdf %}
+  <p class="cv-download"><a href="{{ '/files/cv.pdf' | relative_url }}">Download CV as PDF</a></p>
+{% endif %}
 
 <section class="cv-panel cv-panel--wide">
   <h2>Research Interests</h2>
@@ -93,17 +98,21 @@ redirect_from:
 <section class="cv-panel cv-panel--wide">
   <h2>Selected Publications</h2>
   <div class="cv-publications">
-    {% for publication in site.publications reversed limit: 4 %}
-      <article class="cv-publication">
-        <h3>{{ publication.title }}</h3>
-        {% if publication.citation %}
-          {% assign highlighted_citation = publication.citation | replace: "Deza, A.", "<strong>Deza, A.</strong>" | replace: "Arnaud Deza", "<strong>Arnaud Deza</strong>" %}
-          <p>{{ highlighted_citation }}</p>
-        {% endif %}
-        {% if publication.paperurl %}
-          <a class="cv-link" href="{{ publication.paperurl }}">Paper</a>
-        {% endif %}
-      </article>
+    {% assign selected_publication_urls = "/publication/2025-01-01-learn2aggregate-chvatal-gomory|/publication/2023-01-01-ml-cutting-planes-survey|/publication/2023-01-01-fast-matrix-multiplication-cp" | split: "|" %}
+    {% for publication_url in selected_publication_urls %}
+      {% assign publication = site.publications | where: "permalink", publication_url | first %}
+      {% if publication %}
+        <article class="cv-publication">
+          <h3>{{ publication.title }}</h3>
+          {% if publication.citation %}
+            {% assign highlighted_citation = publication.citation | replace: "Deza, A.", "<strong>Deza, A.</strong>" | replace: "Arnaud Deza", "<strong>Arnaud Deza</strong>" %}
+            <p>{{ highlighted_citation }}</p>
+          {% endif %}
+          {% if publication.paperurl %}
+            <a class="cv-link" href="{{ publication.paperurl }}">Paper</a>
+          {% endif %}
+        </article>
+      {% endif %}
     {% endfor %}
   </div>
 </section>

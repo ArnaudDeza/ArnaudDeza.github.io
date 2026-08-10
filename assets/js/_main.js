@@ -37,6 +37,11 @@ let setTheme = (theme) => {
     $("html").removeAttr("data-theme");
     $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
   }
+
+  $("#theme-toggle button").attr({
+    "aria-pressed": use_theme === "dark" ? "true" : "false",
+    "aria-label": use_theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+  });
 };
 
 // Toggle the theme manually
@@ -51,24 +56,21 @@ var toggleTheme = () => {
    Plotly integration script so that Markdown codeblocks will be rendered
    ========================================================================== */
 
-// Read the Plotly data from the code block, hide it, and render the chart as new node. This allows for the 
-// JSON data to be retrieve when the theme is switched. The listener should only be added if the data is 
-// actually present on the page.
-import { plotlyDarkLayout, plotlyLightLayout } from './theme.js';
+// Read the Plotly data from the code block, hide it, and render the chart as a new node. Plotly is loaded
+// only when a page actually contains a chart so ordinary pages do not download the large library.
 let plotlyElements = document.querySelectorAll("pre>code.language-plotly");
 if (plotlyElements.length > 0) {
-  document.addEventListener("readystatechange", () => {
-    if (document.readyState === "complete") {
+  import('./theme.js').then(({ plotlyDarkLayout, plotlyLightLayout }) => {
+    const plotlyScript = document.createElement('script');
+    plotlyScript.src = 'https://cdn.plot.ly/plotly-3.3.0.min.js';
+    plotlyScript.onload = () => {
       plotlyElements.forEach((elem) => {
-        // Parse the Plotly JSON data and hide it
         var jsonData = JSON.parse(elem.textContent);
         elem.parentElement.classList.add("hidden");
 
-        // Add the Plotly node
         let chartElement = document.createElement("div");
         elem.parentElement.after(chartElement);
 
-        // Set the theme for the plot and render it
         const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
         if (jsonData.layout) {
           jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
@@ -77,7 +79,9 @@ if (plotlyElements.length > 0) {
         }
         Plotly.react(chartElement, jsonData.data, jsonData.layout);
       });
-    }
+    };
+    plotlyScript.onerror = () => console.error('Unable to load Plotly for this page.');
+    document.head.appendChild(plotlyScript);
   });
 }
 

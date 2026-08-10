@@ -3,7 +3,7 @@ title: "Machine Learning for Optimization-Based Separation of Mixed-Integer Roun
 collection: publications
 category: manuscripts
 permalink: /publication/2024-01-01-ml-for-mir-cuts
-excerpt: #"Machine learning for optimization-based separation of mixed-integer rounding cuts."
+excerpt: "Machine learning for optimization-based separation of mixed-integer rounding cuts in mixed-integer linear programming."
 date: 2024-01-01
 venue: "under review"
 paperurl: "https://arxiv.org/abs/2408.08449"
