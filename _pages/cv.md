@@ -58,7 +58,7 @@ redirect_from:
     <article class="cv-entry">
       <img class="entity-logo" src="/images/amazon-ar21.svg" alt="" onerror="this.hidden=true">
       <div>
-        <p class="cv-entry__date">Fall 2026</p>
+        <p class="cv-entry__date"><span>Fall 2026</span><span class="cv-entry__location">Luxembourg, LU</span></p>
         <h3>Incoming Applied Scientist</h3>
         <p>Amazon</p>
       </div>
@@ -66,7 +66,7 @@ redirect_from:
     <article class="cv-entry">
       <img class="entity-logo" src="/images/salesforce-2.svg" alt="" onerror="this.hidden=true">
       <div>
-        <p class="cv-entry__date">Summer 2026</p>
+        <p class="cv-entry__date"><span>Summer 2026</span><span class="cv-entry__location">San Francisco, CA</span></p>
         <h3>Applied Scientist</h3>
         <p>Salesforce</p>
       </div>
@@ -82,9 +82,9 @@ redirect_from:
     <article class="cv-entry">
       <img class="entity-logo" src="/images/Huawei_Standard_logo.svg" alt="" onerror="this.hidden=true">
       <div>
-        <p class="cv-entry__date">Summer 2023</p>
+        <p class="cv-entry__date"><span>Summer 2023</span><span class="cv-entry__location">Vancouver, BC</span></p>
         <h3>Research Engineer</h3>
-        <p>Huawei Technologies Canada, Vancouver Research Centre</p>
+        <p>Huawei Technologies Canada</p>
       </div>
     </article>
   </section>

@@ -29,6 +29,10 @@ redirect_from:
       </div>
       <div class="news-scroll" aria-label="Recent news">
         <article class="news-item" data-year="2026">
+          <time datetime="2026-08">August 2026</time>
+          <p>Traveled to Salesforce Chicago Tower to present my research on large-scale routing and scheduling optimization.</p>
+        </article>
+        <article class="news-item" data-year="2026">
           <time datetime="2026-05">May 2026</time>
           <p>I moved to San Francisco for the summer to intern at Salesforce as an Applied Scientist!</p>
         </article>
@@ -39,6 +43,10 @@ redirect_from:
         <article class="news-item" data-year="2025">
           <time datetime="2025-10">October 2025</time>
           <p>Attended <a href="https://meetings.informs.org/wordpress/annual2025/g">INFORMS 2025</a> in Atlanta Georgia</p>
+        </article>
+        <article class="news-item" data-year="2025">
+          <time datetime="2025-07">July 2025</time>
+          <p>Received an AI4OPT fellowship for my work with the <a href="https://www.ai4opt.org/sbc-2025">Seth Bonder Summer Camp</a>.</p>
         </article>
         <article class="news-item" data-year="2025">
           <time datetime="2025-07">July 2025</time>

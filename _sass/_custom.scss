@@ -728,12 +728,28 @@ html:not([data-theme="dark"]) {
 }
 
 .cv-entry__date {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
   margin: 0 0 0.2rem;
   color: var(--global-text-color-light);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+}
+
+.cv-entry__location {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.cv-entry__location::before {
+  content: "•";
+  margin-right: 0.35rem;
 }
 
 .cv-entry h3,
