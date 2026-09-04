@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 <div class="home-main home-main--focused">
-  <div class="notice--info">
+  <div class="career-update">
     <p><strong>Current update:</strong> For Fall 2026, I am interning as an Applied Scientist with Amazon SCOT in Luxembourg, where I am working on middle-mile network design. Right before joining Amazon, I interned at Salesforce as an Applied Scientist during Summer 2026, working on large-scale routing and scheduling for FieldService.</p>
   </div>
 
