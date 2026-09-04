@@ -11,6 +11,10 @@ redirect_from:
 ---
 
 <div class="home-main home-main--focused">
+  <div class="notice--info">
+    <p><strong>Current update:</strong> For Fall 2026, I am interning as an Applied Scientist with Amazon SCOT in Luxembourg, where I am working on middle-mile network design. Right before joining Amazon, I interned at Salesforce as an Applied Scientist during Summer 2026, working on large-scale routing and scheduling for FieldService.</p>
+  </div>
+
   <p>I am a PhD student in the Machine Learning program at Georgia Tech supervised by <a href="https://scholar.google.com/citations?user=GxFQz-4AAAAJ&amp;hl=en">Pascal Van Hentenryck</a>. At Georgia Tech, I am part of the <a href="https://www.ai4opt.org/">National Science Foundation AI Research Institute for Advances in Optimization</a>, where I work on machine learning for large-scale optimization in supply chains, logistics, and manufacturing. I am grateful to be funded by the ISyE Presidential Herren Fellowship.</p>
 
     <p>Prior to Georgia Tech, I completed a MASc at the University of Toronto in the Industrial Engineering Department under the supervision of <a href="https://scholar.google.com/citations?user=juqDWQMAAAAJ&amp;hl=en">Elias Khalil</a> funded by an NSERC CGS-M. During this time I worked at the intersection of machine learning, discrete optimization and optimization solvers.</p>
@@ -34,6 +38,10 @@ redirect_from:
         <button type="button" class="news-filter__button" data-news-filter="2022" aria-pressed="false">2022</button>
       </div>
       <div class="news-scroll" aria-label="Recent news">
+        <article class="news-item" data-year="2026">
+          <time datetime="2026-08">August 2026</time>
+          <p>Started an internship as an Applied Scientist with Amazon SCOT in Luxembourg, working on middle-mile network design!</p>
+        </article>
         <article class="news-item" data-year="2026">
           <time datetime="2026-08">August 2026</time>
           <p>Traveled to Salesforce Chicago Tower to present my research on large-scale routing and scheduling optimization.</p>

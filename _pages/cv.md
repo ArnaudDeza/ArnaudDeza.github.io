@@ -64,8 +64,8 @@ redirect_from:
       <img class="entity-logo" src="/images/amazon-ar21.svg" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date"><span>Fall 2026</span><span class="cv-entry__location">Luxembourg, LU</span></p>
-        <h3>Incoming Applied Scientist</h3>
-        <p>Amazon</p>
+        <h3>Applied Scientist</h3>
+        <p>Amazon SCOT</p>
       </div>
     </article>
     <article class="cv-entry">
