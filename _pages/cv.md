@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 <section class="cv-hero">
-  <p>My work sits at the intersection of machine learning, optimization, and decision-making systems, with a focus on large-scale optimization for supply chain, logistics, manufacturing, and solver workflows.</p>
+  <p>My work sits at the intersection of machine learning, optimization, and decision-making systems, with a focus on GPU computing and distributed optimization for large-scale problems in supply chain, logistics, manufacturing, and solver workflows.</p>
 </section>
 
 {% assign cv_pdf = site.static_files | where: "path", "/files/cv.pdf" | first %}
@@ -98,7 +98,7 @@ redirect_from:
 <section class="cv-panel cv-panel--wide">
   <h2>Selected Publications</h2>
   <div class="cv-publications">
-    {% assign selected_publication_urls = "/publication/2025-01-01-learn2aggregate-chvatal-gomory|/publication/2023-01-01-ml-cutting-planes-survey|/publication/2023-01-01-fast-matrix-multiplication-cp" | split: "|" %}
+    {% assign selected_publication_urls = "/publication/2026-09-08-distributed-linear-programming|/publication/2025-01-01-learn2aggregate-chvatal-gomory|/publication/2023-01-01-ml-cutting-planes-survey|/publication/2023-01-01-fast-matrix-multiplication-cp" | split: "|" %}
     {% for publication_url in selected_publication_urls %}
       {% assign publication = site.publications | where: "permalink", publication_url | first %}
       {% if publication %}
