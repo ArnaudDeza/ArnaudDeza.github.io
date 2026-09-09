@@ -33,14 +33,10 @@ author:
   uri              : # URL
   email            : "adeza3@gatech.edu" # Updated with my Georgia Institute of Technology email
   research_interests:
-    - "Machine Learning"
-    - "Large Language Models"
-    - "Operations Research"
+    - "Machine Learning for Optimization"
     - "Large-scale Optimization"
-    - "GPU Optimization"
-    - "Distributed Optimization"
+    - "GPU and Distributed Computing"
     - "Discrete Optimization"
-    - "Optimization Solvers"
     - "Routing and Scheduling"
 
   # Academic websites
