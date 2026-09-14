@@ -2,6 +2,8 @@
 layout: archive
 title: "Sitemap"
 permalink: /sitemap/
+sitemap: false
+noindex: true
 author_profile: true
 ---
 

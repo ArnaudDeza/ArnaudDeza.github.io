@@ -5,7 +5,8 @@
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
 // "system". Default is "system".
 let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
+  let themeSetting;
+  try { themeSetting = localStorage.getItem("theme"); } catch (_) { /* Storage may be disabled. */ }
   return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 };
 
@@ -16,19 +17,12 @@ let determineComputedTheme = () => {
   if (themeSetting != "system") {
     return themeSetting;
   }
-  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 };
-
-// detect OS/browser preference
-const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
 // Set the theme on page load or when explicitly called
 let setTheme = (theme) => {
-  const use_theme =
-    theme ||
-    localStorage.getItem("theme") ||
-    $("html").attr("data-theme") ||
-    browserPref;
+  const use_theme = theme || determineComputedTheme();
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
@@ -48,7 +42,7 @@ let setTheme = (theme) => {
 var toggleTheme = () => {
   const current_theme = $("html").attr("data-theme");
   const new_theme = current_theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", new_theme);
+  try { localStorage.setItem("theme", new_theme); } catch (_) { /* Keep the toggle usable without storage. */ }
   setTheme(new_theme);
 };
 
@@ -98,7 +92,7 @@ $(document).ready(function () {
   setTheme();
   window.matchMedia('(prefers-color-scheme: dark)')
         .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
+          if (determineThemeSetting() === "system") {
             setTheme(e.matches ? "dark" : "light");
           }
         });
@@ -111,15 +105,11 @@ $(document).ready(function () {
     $("body").css("padding-bottom", "0");
     $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
   }
-  $(window).resize(function () {
-    didResize = true;
+  let resizeFrame;
+  $(window).on('resize', function () {
+    cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(bumpIt);
   });
-  setInterval(function () {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }}, 250);
-  var didResize = false;
   bumpIt();
 
   // FitVids init
@@ -128,7 +118,8 @@ $(document).ready(function () {
   // Follow menu drop down
   $(".author__urls-wrapper button").on("click", function () {
     $(".author__urls").fadeToggle("fast", function () { });
-    $(".author__urls-wrapper button").toggleClass("open");
+    const button = $(".author__urls-wrapper button");
+    button.toggleClass("open").attr("aria-expanded", button.hasClass("open") ? "true" : "false");
   });
 
   // Restore the follow menu if toggled on a window resize

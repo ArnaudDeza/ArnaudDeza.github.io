@@ -51,7 +51,12 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-        {{ content }}
+        {% assign body_text = content | strip_html | strip %}
+        {% if page.collection == 'publications' and body_text == '' and page.excerpt %}
+          {{ page.excerpt | markdownify }}
+        {% else %}
+          {{ content }}
+        {% endif %}
 
         {% if page.citation %}
           <p style="font-size: smaller">{{ page.citation }}</p>

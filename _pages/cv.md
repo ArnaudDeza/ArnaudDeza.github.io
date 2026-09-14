@@ -31,7 +31,7 @@ redirect_from:
   <section class="cv-panel">
     <h2>Education</h2>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/GTVertical_RGB.svg" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" width="48" height="48" loading="lazy" decoding="async" src="/images/GTVertical_RGB.svg" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date"><span>2024-Present</span><span class="cv-entry__location">Atlanta, GA</span></p>
         <h3>PhD in Machine Learning</h3>
@@ -40,7 +40,7 @@ redirect_from:
       </div>
     </article>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" width="48" height="48" loading="lazy" decoding="async" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date"><span>2022-2024</span><span class="cv-entry__location">Toronto, ON</span></p>
         <h3>MASc in Industrial Engineering</h3>
@@ -49,7 +49,7 @@ redirect_from:
       </div>
     </article>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" width="48" height="48" loading="lazy" decoding="async" src="/images/uni_toronto.png" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date"><span>2018-2022</span><span class="cv-entry__location">Toronto, ON</span></p>
         <h3>BASc in Engineering Science</h3>
@@ -61,7 +61,7 @@ redirect_from:
   <section class="cv-panel">
     <h2>Experience</h2>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/amazon-ar21.svg" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" width="48" height="48" loading="lazy" decoding="async" src="/images/amazon-ar21.svg" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date"><span>Fall 2026</span><span class="cv-entry__location">Luxembourg, LU</span></p>
         <h3>Applied Scientist</h3>
@@ -69,7 +69,7 @@ redirect_from:
       </div>
     </article>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/salesforce-2.svg" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" width="48" height="48" loading="lazy" decoding="async" src="/images/salesforce-2.svg" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date"><span>Summer 2026</span><span class="cv-entry__location">San Francisco, CA</span></p>
         <h3>Applied Scientist</h3>
@@ -77,7 +77,7 @@ redirect_from:
       </div>
     </article>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/AI4OPT-Logo-2.png" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" width="48" height="48" loading="lazy" decoding="async" src="/images/AI4OPT-Logo-2.png" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date"><span>2024-Present</span><span class="cv-entry__location">Atlanta, GA</span></p>
         <h3>Graduate Researcher</h3>
@@ -85,7 +85,7 @@ redirect_from:
       </div>
     </article>
     <article class="cv-entry">
-      <img class="entity-logo" src="/images/Huawei_Standard_logo.svg" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" width="48" height="48" loading="lazy" decoding="async" src="/images/Huawei_Standard_logo.svg" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date"><span>Summer 2023</span><span class="cv-entry__location">Vancouver, BC</span></p>
         <h3>Research Engineer</h3>

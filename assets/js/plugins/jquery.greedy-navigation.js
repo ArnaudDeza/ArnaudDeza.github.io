@@ -74,9 +74,9 @@ function updateNav() {
 $(window).on('resize', function () {
   updateNav();
 });
-screen.orientation.addEventListener("change", function () {
-  updateNav();
-});
+if (screen.orientation && screen.orientation.addEventListener) {
+  screen.orientation.addEventListener("change", updateNav);
+}
 
 $btn.on('click', function () {
   var isOpen = !$(this).hasClass('close');

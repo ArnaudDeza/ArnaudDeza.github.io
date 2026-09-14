@@ -179,6 +179,12 @@ include:
   - _pages
   - files
 exclude:
+  - scripts
+  - CONTRIBUTING.md
+  - "**/README.md"
+  - images/themes
+  - images/GTVertical_PMSMetallic_8383.eps
+  - images/GTVertical_PMSMetallic_8383.pdf
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -256,6 +262,15 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
+  # Keep utility files reachable without advertising them in search sitemaps.
+  - scope:
+      path: "googlec8980eec6bbc51ec.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "files"
+    values:
+      sitemap: false
   # _posts
   - scope:
       path: ""
