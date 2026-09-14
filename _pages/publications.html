@@ -36,10 +36,10 @@ archive_class: archive--publications
           <span>{{ post.category | replace: "-", " " }}</span>
         {% endif %}
         {% if post.paperurl %}
-          <a href="{{ post.paperurl }}">Paper</a>
+          <a href="{{ post.paperurl }}" data-analytics-event="paper_click" data-publication-id="{{ post.url | escape }}">Paper</a>
         {% endif %}
         {% if post.bibtex %}
-          <button type="button" class="publication-card__bibtex" data-bibtex-target="publication-bibtex-{{ forloop.index }}">BibTeX</button>
+          <button type="button" class="publication-card__bibtex" data-bibtex-target="publication-bibtex-{{ forloop.index }}" data-publication-id="{{ post.url | escape }}">BibTeX</button>
         {% elsif post.bibtexurl %}
           <a href="{{ post.bibtexurl }}">BibTeX</a>
         {% endif %}
@@ -100,6 +100,9 @@ archive_class: archive--publications
 
         try {
           await navigator.clipboard.writeText(bibtexSource.textContent.trim());
+          if (window.trackResearchInteraction) {
+            window.trackResearchInteraction("bibtex_copy", button.getAttribute("data-publication-id"));
+          }
           button.textContent = "Copied";
           window.setTimeout(function () {
             button.textContent = originalLabel;

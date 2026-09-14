@@ -22,7 +22,7 @@
   },
   "homepage": "https://arnauddeza.github.io/",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">=22.19"
   },
   "dependencies": {
     "fitvids": "^2.1.1",
@@ -30,6 +30,8 @@
     "jquery-smooth-scroll": "^2.2.0"
   },
   "devDependencies": {
+    "chrome-launcher": "1.2.1",
+    "lighthouse": "13.4.1",
     "onchange": "^7.1.0",
     "uglify-js": "^3.17.4"
   },

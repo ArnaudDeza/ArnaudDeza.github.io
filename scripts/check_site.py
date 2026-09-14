@@ -5,7 +5,7 @@ No third-party dependencies. Run against a production Jekyll build.
 """
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import unquote, urlsplit, urljoin
 import json
 import sys
 import xml.etree.ElementTree as ET
@@ -98,6 +98,7 @@ def main():
               f'{url}: noindex page advertised in sitemap')
         check(any(m.get('property') == 'og:image' for m in page.meta), f'{url}: missing social image')
         for reference in page.refs:
+            reference = urljoin(url, reference)
             parsed = urlsplit(reference)
             if parsed.scheme not in ('', 'http', 'https') or parsed.netloc not in ('', 'arnauddeza.github.io'):
                 continue

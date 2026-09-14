@@ -1,0 +1,54 @@
+name: Website quality
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Build JavaScript and test interactions
+        run: |
+          npm run build:js
+          node scripts/test_analytics_events.cjs
+          git diff --exit-code -- assets/js/main.min.js
+      - name: Build production site and check SEO and local links
+        run: |
+          JEKYLL_ENV=production bundle exec jekyll build --safe
+          python3 scripts/check_site.py _site
+      - name: Audit external links
+        run: python3 scripts/check_external_links.py _site
+      - name: Lighthouse mobile reports
+        if: ${{ !cancelled() && hashFiles('_site/index.html') != '' }}
+        run: node scripts/lighthouse_reports.mjs
+      - name: Save quality reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-quality-reports
+          path: |
+            quality-reports/
+          retention-days: 30
