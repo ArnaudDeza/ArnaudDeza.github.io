@@ -86,7 +86,8 @@ links, tests interaction tracking, checks public outbound links, and runs three 
 Lighthouse samples for the homepage, publications and CV. Download the
 `website-quality-reports` artifact for HTML Lighthouse reports and link-check results.
 Performance below 80 produces a warning; accessibility/best-practices below 95 or SEO
-below 100 fail the check. Scores use median runs and are CI lab data, not real-user scores.
+below 100 fail the check. Scores use median runs with applied DevTools mobile throttling and are CI lab data,
+not real-user scores.
 Third-party 403/429/time-out responses are marked unverified; only repeated 404/410
 responses are classified as broken. Reports stay in GitHub artifacts for 30 days.
 

@@ -18,4 +18,6 @@ assert.deepEqual(calls, [
   ['event', 'paper_click', {publication_id: '/publication/example'}],
   ['event', 'bibtex_copy', {publication_id: '/publication/example'}]
 ]);
+context.window.gtag = () => { throw new Error('Analytics unavailable'); };
+assert.doesNotThrow(() => context.window.trackResearchInteraction('bibtex_copy', '/publication/example'));
 console.log('PASS: interaction events, missing analytics, and payload restrictions');

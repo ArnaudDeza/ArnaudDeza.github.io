@@ -30,11 +30,12 @@ try {
     for (let run = 1; run <= 3; run++) {
       const result = await lighthouse(`http://127.0.0.1:${server.address().port}${path}`, {
         port: chrome.port, output: ['html', 'json'], logLevel: 'error',
+        throttlingMethod: 'devtools',
         blockedUrlPatterns: ['*googletagmanager.com/*', '*google-analytics.com/*']
       });
-      if (result.lhr.runtimeError) throw new Error(`${name}: ${result.lhr.runtimeError.message}`);
       await writeFile(resolve(output, `${name}-${run}.html`), result.report[0]);
       await writeFile(resolve(output, `${name}-${run}.json`), result.report[1]);
+      if (result.lhr.runtimeError) throw new Error(`${name}: ${result.lhr.runtimeError.message}`);
       scores.push(Object.fromEntries(Object.entries(result.lhr.categories).map(([key, value]) => [key, value.score])));
     }
     const medians = Object.fromEntries(Object.keys(scores[0]).map(key => [key, scores.map(score => score[key]).sort((a, b) => a - b)[1]]));

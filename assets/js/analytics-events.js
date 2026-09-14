@@ -10,7 +10,11 @@
       return;
     }
     // Send only the public publication path, never clipboard contents or form data.
-    window.gtag("event", eventName, {publication_id: publicationId});
+    try {
+      window.gtag("event", eventName, {publication_id: publicationId});
+    } catch (_) {
+      // Analytics must not interrupt navigation or a successful citation copy.
+    }
   };
 
   document.addEventListener("click", function (event) {
