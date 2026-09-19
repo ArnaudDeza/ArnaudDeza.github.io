@@ -1,4 +1,4 @@
-"""Regenerate small, deterministic font subsets and profile image sizes.
+"""Regenerate small, deterministic font subsets, profile images, and CV logos.
 
 Run after adding icons to templates or replacing images/profile_dez.jpg.
 Install scripts/requirements-assets.txt in a virtual environment first.
@@ -67,6 +67,18 @@ def build_photos():
             print(f'{output.name}: {width}x{height}, {output.stat().st_size:,} bytes')
 
 
+def build_logos():
+    # The CV displays this logo at about 70 CSS pixels wide. Preserve detail
+    # on high-density displays without downloading the 1053-pixel original.
+    with Image.open(ROOT / 'images/AI4OPT-Logo-2.png') as source:
+        image = source.convert('RGBA')
+        image.thumbnail((240, 240), Image.Resampling.LANCZOS)
+        output = ROOT / 'images/ai4opt-240.webp'
+        image.save(output, lossless=True, method=6)
+        print(f'{output.name}: {image.width}x{image.height}, {output.stat().st_size:,} bytes')
+
+
 if __name__ == '__main__':
     build_fonts()
     build_photos()
+    build_logos()

@@ -37,7 +37,7 @@ A local build does not publish the site.
 
 ## Optimized assets
 
-Font subsets and responsive profile images are checked in, so GitHub Pages needs no
+Font subsets, responsive profile images, and the small CV logo are checked in, so GitHub Pages needs no
 extra Python build step. After adding icon classes to templates or changing the portrait:
 
 ```sh
@@ -47,7 +47,8 @@ local/assets-venv/bin/python scripts/optimize_assets.py
 ```
 
 The generator scans templates, content, data and JavaScript for icon classes. Keep icon
-class names literal so they can be detected. It preserves original fonts and photographs.
+class names literal so they can be detected. It preserves original fonts, photographs, and logos.
+The AI4OPT CV logo is resized to 240 pixels and saved as lossless WebP for high-density displays.
 Font Awesome and Academicons retain their upstream font/code license notices.
 
 ## Search and inherited files

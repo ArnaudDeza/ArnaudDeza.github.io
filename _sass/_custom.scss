@@ -370,34 +370,6 @@ html[data-theme="dark"] {
   margin: 2rem 0;
 }
 
-.home-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1.25rem 0 1.5rem;
-}
-
-.home-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--global-border-color);
-  border-radius: 999px;
-  padding: 0.45rem 0.85rem;
-  background: var(--global-bg-color);
-  color: var(--global-link-color);
-  font-size: 0.82rem;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.home-action:hover,
-.home-action:focus-visible {
-  border-color: var(--global-link-color);
-  background: var(--global-border-color);
-  outline: 0;
-}
-
 @media (min-width: 1024px) {
   .page--home .sidebar {
     width: 20%;

@@ -77,7 +77,7 @@ redirect_from:
       </div>
     </article>
     <article class="cv-entry">
-      <img class="entity-logo" width="48" height="48" loading="lazy" decoding="async" src="/images/AI4OPT-Logo-2.png" alt="" onerror="this.hidden=true">
+      <img class="entity-logo" width="48" height="48" loading="lazy" decoding="async" src="/images/ai4opt-240.webp" alt="" onerror="this.hidden=true">
       <div>
         <p class="cv-entry__date"><span>2024-Present</span><span class="cv-entry__location">Atlanta, GA</span></p>
         <h3>Graduate Researcher</h3>
