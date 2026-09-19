@@ -27,12 +27,6 @@ redirect_from:
 
     <p>I’m always happy to chat about machine learning, optimization, research ideas, or potential collaborations. Whether you’re a student, researcher, or industry practitioner, please feel free to <a href="mailto:adeza3@gatech.edu">reach out</a>.</p>
 
-    <div class="home-actions" aria-label="Quick links">
-      <a class="home-action" href="{{ '/publications/' | relative_url }}">View publications</a>
-      <a class="home-action" href="{{ '/cv/' | relative_url }}">View CV</a>
-      {% if site.author.googlescholar %}<a class="home-action" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
-    </div>
-
     <section class="home-section home-news">
       <h2>News and Updates</h2>
       <div class="news-filter" aria-label="Filter news by year">
