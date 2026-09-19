@@ -69,11 +69,21 @@ image variants are candidates for a later deletion pass after checking historica
 ## Tracking and quality reports
 
 The production site retains GA4 `G-KBCZXG6MLQ`. `assets/js/analytics-events.js`
-adds two research events: `paper_click` on labeled paper links and `bibtex_copy`
-only after a successful copy. Both send a public `publication_id` path; no citation
-clipboard contents are sent. Register `publication_id` as an event-scoped custom
+adds `paper_click` on labeled paper links, `bibtex_copy` only after a successful copy,
+and `publication_view` once per publication-page load. `email_click` records mail-link
+intent (not a sent message). `code_click` records HTTPS GitHub/GitLab/Bitbucket links
+inside publication content when those links exist; sidebar/footer profile links are excluded.
+Research events send only a public `publication_id` path. Email events include it only
+on a publication page; no email address, destination query, or clipboard contents are sent.
+Register `publication_id` as an event-scoped custom
 dimension in GA4 to break down interactions by paper. Historical clicks cannot be
 reconstructed; collection starts after deployment.
+
+Compare events by Publication and Event name in GA4 Explore. Publication views are
+detail-page loads, not impressions of cards on the Publications list. Paper clicks
+can originate on that list, so clicks divided by detail-page views is not a conversion
+rate. Use session-based funnels for conversion analysis. Existing abstracts are static;
+there is no abstract-expansion event. No session replay or new visitor identifier is added.
 
 Use GA4 enhanced measurement for outbound profile links and PDF download-link clicks;
 these are separate from the custom research events and should not be summed as unique
