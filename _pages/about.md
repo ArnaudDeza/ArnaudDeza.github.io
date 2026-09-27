@@ -21,9 +21,7 @@ redirect_from:
 
     <p>During my MASc, I was fortunate to intern at Huawei Technologies Canada in the Vancouver Research Centre. During my internship, I worked on integrating machine learning into discrete optimization solver subroutines under the supervision of <a href="https://scholar.google.com/citations?user=K2zamrwAAAAJ&amp;hl=en">Yong Zhang</a> and <a href="https://scholar.google.com/citations?user=2fKv_JQAAAAJ&amp;hl=en">Zirui Zhou</a>.</p>
 
-    <!--
     <p><small><strong>A few other Dezas seem to work on related topics, too:</strong> <a href="https://en.wikipedia.org/wiki/Michel_Deza" aria-label="Michel Deza">¹</a> <a href="https://www.cas.mcmaster.ca/~deza/" aria-label="Antoine Deza">²</a> <a href="https://annadeza.github.io/" aria-label="Anna Deza">³</a> <a href="https://gabrieldeza.github.io/" aria-label="Gabriel Deza">⁴</a> <a href="https://dezadaniel.github.io/" aria-label="Daniel Deza">⁵</a></small></p>
-    -->
 
     <p>I’m always happy to chat about machine learning, optimization, research ideas, or potential collaborations. Whether you’re a student, researcher, or industry practitioner, please feel free to <a href="mailto:adeza3@gatech.edu">reach out</a>.</p>
 
