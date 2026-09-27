@@ -23,8 +23,6 @@ redirect_from:
 
     <p><small><strong>A few other Dezas seem to work on related topics, too:</strong> <a href="https://en.wikipedia.org/wiki/Michel_Deza" aria-label="Michel Deza">¹</a> <a href="https://www.cas.mcmaster.ca/~deza/" aria-label="Antoine Deza">²</a> <a href="https://annadeza.github.io/" aria-label="Anna Deza">³</a> <a href="https://gabrieldeza.github.io/" aria-label="Gabriel Deza">⁴</a> <a href="https://dezadaniel.github.io/" aria-label="Daniel Deza">⁵</a></small></p>
 
-    <p>I’m always happy to chat about machine learning, optimization, research ideas, or potential collaborations. Whether you’re a student, researcher, or industry practitioner, please feel free to <a href="mailto:adeza3@gatech.edu">reach out</a>.</p>
-
     <section class="home-section home-news">
       <h2>News and Updates</h2>
       <div class="news-filter" aria-label="Filter news by year">
