@@ -31,6 +31,8 @@ try {
       const result = await lighthouse(`http://127.0.0.1:${server.address().port}${path}`, {
         port: chrome.port, output: ['html', 'json'], logLevel: 'error',
         throttlingMethod: 'devtools',
+        // The CV remains public but is intentionally excluded from search results.
+        skipAudits: path === '/cv/' ? ['is-crawlable'] : [],
         blockedUrlPatterns: ['*googletagmanager.com/*', '*google-analytics.com/*']
       });
       await writeFile(resolve(output, `${name}-${run}.html`), result.report[0]);
@@ -53,7 +55,7 @@ try {
   await writeFile(resolve(output, 'summary.json'), JSON.stringify(summary, null, 2) + '\n');
   const lines = ['## Mobile Lighthouse (median of three runs)', '', '| Page | Performance | Accessibility | Best practices | SEO |', '|---|---:|---:|---:|---:|'];
   for (const row of summary) lines.push(`| ${row.page} | ${['performance', 'accessibility', 'best-practices', 'seo'].map(key => Math.round(row.scores[key] * 100)).join(' | ')} |`);
-  lines.push('', 'CI lab measurements with Analytics requests blocked; not real-user traffic metrics.');
+  lines.push('', 'The CV is intentionally noindex; its SEO score excludes the is-crawlable audit. The site check verifies that policy and keeps the homepage indexable.', '', 'CI lab measurements with Analytics requests blocked; not real-user traffic metrics.');
   await writeFile(resolve(output, 'summary.md'), lines.join('\n') + '\n');
   if (process.env.GITHUB_STEP_SUMMARY) await writeFile(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n', {flag: 'a'});
 }

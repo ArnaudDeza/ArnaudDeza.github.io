@@ -109,9 +109,12 @@ def main():
     check(len(home.jsonld) == 1, 'Homepage should have one consolidated JSON-LD block')
     graph = home.jsonld[0].get('@graph', []) if home.jsonld else []
     check({node.get('@type') for node in graph} == {'Person', 'WebSite', 'ProfilePage'}, 'Unexpected homepage identity graph')
-    for demo in ('cv-json/index.html', 'collection-archive/index.html', '404.html'):
+    check(origin + '/' in urls, 'Homepage missing from sitemap')
+    check(not any('noindex' in m.get('content', '') for m in home.meta if m.get('name') == 'robots'), 'Homepage must remain indexable')
+    for demo in ('cv/index.html', 'cv-json/index.html', 'collection-archive/index.html', '404.html'):
         page = Page((root / demo).read_text())
         check(any('noindex' in m.get('content', '') for m in page.meta if m.get('name') == 'robots'), f'{demo}: missing noindex')
+    check(origin + '/cv/' not in urls, 'CV must remain excluded from sitemap')
     verification = root / 'googlec8980eec6bbc51ec.html'
     source = Path(__file__).resolve().parents[1] / verification.name
     check(verification.read_bytes() == source.read_bytes(), 'Google ownership file changed')

@@ -2,6 +2,8 @@
 layout: archive
 title: "CV"
 permalink: /cv/
+noindex: true
+sitemap: false
 description: "Curriculum vitae of Arnaud Deza, a PhD student in Machine Learning at Georgia Tech working on optimization and decision-making systems."
 author_profile: true
 archive_class: archive--cv
