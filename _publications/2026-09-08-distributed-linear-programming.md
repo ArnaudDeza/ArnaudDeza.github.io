@@ -5,9 +5,9 @@ category: manuscripts
 permalink: /publication/2026-09-08-distributed-linear-programming
 date: 2026-09-08
 excerpt: "SHARDLP distributes linear programming across GPU clusters, solving problems with up to 13.6 billion variables while keeping the matrix and primal-dual state partitioned from input through output."
-venue: "arXiv preprint"
+venue: "NeurIPS OPT Workshop (accepted)"
 paperurl: "https://arxiv.org/abs/2609.09108"
-citation: "Deza, A., Dey, S., &amp; Van Hentenryck, P. (2026). &quot;Distributed Linear Programming on GPU Clusters at Extreme Scale.&quot; arXiv preprint arXiv:2609.09108."
+citation: "Deza, A., Dey, S., &amp; Van Hentenryck, P. (2026). &quot;Distributed Linear Programming on GPU Clusters at Extreme Scale.&quot; Accepted to the NeurIPS 2026 OPT Workshop. arXiv:2609.09108."
 bibtex: |
   @misc{deza2026distributed,
     title = {Distributed Linear Programming on {GPU} Clusters at Extreme Scale},

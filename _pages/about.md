@@ -35,6 +35,10 @@ redirect_from:
       </div>
       <div class="news-scroll" aria-label="Recent news">
         <article class="news-item" data-year="2026">
+          <time datetime="2026-10">October 2026</time>
+          <p>Two papers accepted to NeurIPS 2026 workshops: <a href="https://arxiv.org/abs/2609.09108">SHARDLP</a> at <a href="https://opt-ml.org/">OPT</a> (Sydney), and <a href="https://arxiv.org/abs/2605.18692">LLM-guided re-optimization</a> at <a href="https://mlxor-2026.github.io/">ML×OR</a> (Atlanta)!</p>
+        </article>
+        <article class="news-item" data-year="2026">
           <time datetime="2026-09-08">September 2026</time>
           <p>Our new paper <a href="https://arxiv.org/abs/2609.09108">"Distributed Linear Programming on GPU Clusters at Extreme Scale"</a> is now on arXiv! We introduce SHARDLP for distributed linear programming at billion-variable scale.</p>
         </article>
