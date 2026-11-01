@@ -72,7 +72,19 @@ html[data-theme="dark"] {
   object-fit: contain;
 }
 
-.author__badge--amazon { background: #fff; }
+.author__badge--ai4opt {
+  width: 48px;
+  height: 28px;
+  padding: 2px;
+  background: #fff;
+}
+
+.sidebar .author__badge--ai4opt img {
+  width: 44px;
+  height: 24px;
+}
+
+.sidebar .author__badge--amazon img { border-radius: 4px; }
 .author__badge:hover { transform: translateY(-2px); }
 .author__badge:focus-visible { outline: 2px solid var(--global-link-color); outline-offset: 3px; }
 
