@@ -241,9 +241,10 @@ html[data-page-direction="previous"]::view-transition-new(page-content) { animat
   line-height: 1.25;
 }
 
-.publication-card__citation {
-  margin: 0;
-  line-height: 1.35;
+.publication-card__authors {
+  margin: 0 0 0.35rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .publication-card__meta a {
@@ -663,8 +664,6 @@ html[data-theme="dark"] .career-update {
 }
 
 .news-scroll {
-  max-height: 15rem;
-  overflow-y: auto;
   border: 1px solid var(--global-border-color);
   border-radius: 8px;
   padding: 0.25rem 1rem;

@@ -47,6 +47,11 @@ archive_class: archive--publications
       {% if post.bibtex %}
         <script type="application/x-bibtex" id="publication-bibtex-{{ forloop.index }}">{{ post.bibtex | strip }}</script>
       {% endif %}
+      {% if post.citation %}
+        {% assign citation_authors = post.citation | split: '&quot;' | first | strip %}
+        {% assign highlighted_authors = citation_authors | replace: "Deza, A.", "<strong>Deza, A.</strong>" | replace: "Arnaud Deza", "<strong>Arnaud Deza</strong>" %}
+        <p class="publication-card__authors">{{ highlighted_authors }}</p>
+      {% endif %}
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       {% if post.venue %}
         <p class="publication-card__venue">
@@ -56,10 +61,6 @@ archive_class: archive--publications
             {{ post.venue }}
           {% endif %}
         </p>
-      {% endif %}
-      {% if post.citation %}
-        {% assign highlighted_citation = post.citation | replace: "Deza, A.", "<strong>Deza, A.</strong>" | replace: "Arnaud Deza", "<strong>Arnaud Deza</strong>" %}
-        <p class="publication-card__citation">{{ highlighted_citation }}</p>
       {% endif %}
     </article>
   {% endfor %}
