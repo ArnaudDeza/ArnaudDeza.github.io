@@ -2,11 +2,13 @@
 
 Usage: python3 scripts/check_site.py _site
 No third-party dependencies. Run against a production Jekyll build.
+Requires Node.js to syntax-check the generated inline JavaScript.
 """
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit, urljoin
 import json
+import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
@@ -20,6 +22,9 @@ class Page(HTMLParser):
         self.in_title = False
         self.in_json = False
         self.json_text = ''
+        self.in_script = False
+        self.script_text = ''
+        self.classic_scripts = []
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
@@ -35,6 +40,9 @@ class Page(HTMLParser):
         if tag == 'script' and attrs.get('type') == 'application/ld+json':
             self.in_json = True
             self.json_text = ''
+        if tag == 'script' and not attrs.get('src') and attrs.get('type', '').lower() in ('', 'text/javascript', 'application/javascript'):
+            self.in_script = True
+            self.script_text = ''
         if tag in ('a', 'img', 'script', 'source', 'link'):
             for key in ('href', 'src'):
                 if attrs.get(key):
@@ -48,12 +56,17 @@ class Page(HTMLParser):
         if tag == 'script' and self.in_json:
             self.jsonld.append(json.loads(self.json_text))
             self.in_json = False
+        if tag == 'script' and self.in_script:
+            self.classic_scripts.append(self.script_text)
+            self.in_script = False
 
     def handle_data(self, data):
         if self.in_title:
             self.title += data
         if self.in_json:
             self.json_text += data
+        if self.in_script:
+            self.script_text += data
 
 
 def main():
@@ -63,10 +76,20 @@ def main():
     errors = []
     titles = set()
     descriptions = set()
+    checked_scripts = set()
 
     def check(condition, message):
         if not condition:
             errors.append(message)
+
+    def check_scripts(page, label):
+        for source in page.classic_scripts:
+            if not source.strip() or source in checked_scripts:
+                continue
+            checked_scripts.add(source)
+            # Production HTML compression can break otherwise valid inline scripts.
+            result = subprocess.run(['node', '--check'], input=source, text=True, capture_output=True)
+            check(result.returncode == 0, f'{label}: invalid generated inline JavaScript\n{result.stderr}')
 
     def resolve(url):
         path = root / unquote(urlsplit(url).path).lstrip('/')
@@ -85,6 +108,7 @@ def main():
         if not path.exists() or path.suffix != '.html':
             continue
         page = Page(path.read_text())
+        check_scripts(page, url)
         desc = [m.get('content', '') for m in page.meta if m.get('name') == 'description']
         check(len(desc) == 1 and bool(desc[0]), f'{url}: expected one nonempty description')
         check(page.canonicals == [url], f'{url}: canonical mismatch: {page.canonicals}')
@@ -113,6 +137,7 @@ def main():
     check(not any('noindex' in m.get('content', '') for m in home.meta if m.get('name') == 'robots'), 'Homepage must remain indexable')
     for demo in ('cv/index.html', 'cv-json/index.html', 'collection-archive/index.html', '404.html'):
         page = Page((root / demo).read_text())
+        check_scripts(page, demo)
         check(any('noindex' in m.get('content', '') for m in page.meta if m.get('name') == 'robots'), f'{demo}: missing noindex')
     check(origin + '/cv/' not in urls, 'CV must remain excluded from sitemap')
     verification = root / 'googlec8980eec6bbc51ec.html'
@@ -125,7 +150,7 @@ def main():
     if errors:
         print('\n'.join(errors))
         raise SystemExit(1)
-    print(f'PASS: {len(urls)} sitemap targets; metadata, identity graph, local references, noindex, verification and production analytics checked.')
+    print(f'PASS: {len(urls)} sitemap targets; metadata, identity graph, local references, noindex, verification, production analytics and inline JavaScript checked.')
 
 
 if __name__ == '__main__':
