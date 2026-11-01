@@ -1,0 +1,105 @@
+<script>
+/* Progressive enhancement: every tab remains a normal, independently indexed page. */
+(function () {
+  'use strict';
+  var paths = {{ site.data.navigation.main | map: 'url' | jsonify }};
+  var root = document.documentElement;
+  var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var transitionKey = 'site-page-transition';
+  var gestureKey = 'site-page-gesture-until';
+  var pendingUrl;
+
+  function index(url) {
+    try {
+      var parsed = new URL(url, location.href);
+      return parsed.origin === location.origin ? paths.indexOf(parsed.pathname) : -1;
+    } catch (_) { return -1; }
+  }
+  function read(key) {
+    try { return sessionStorage.getItem(key); } catch (_) { return null; }
+  }
+  function write(key, value) {
+    try { sessionStorage.setItem(key, value); } catch (_) { /* Navigation still works. */ }
+  }
+  if (index(location.href) >= 0) root.dataset.sitePage = 'true';
+
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey ||
+        event.ctrlKey || event.altKey || event.shiftKey || link.target || link.hasAttribute('download')) return;
+    pendingUrl = link.href;
+  });
+
+  window.addEventListener('pageswap', function (event) {
+    if (!event.viewTransition) return;
+    var to = event.activation && event.activation.entry ? event.activation.entry.url : pendingUrl;
+    if (motion.matches || index(location.href) < 0 || (to && index(to) < 0)) {
+      event.viewTransition.skipTransition();
+      return;
+    }
+    // This fallback also supplies direction on Safari versions without NavigationActivation.
+    write(transitionKey, JSON.stringify({from: location.href, to: to || null, time: Date.now()}));
+  });
+
+  window.addEventListener('pagereveal', function (event) {
+    pendingUrl = null;
+    if (!event.viewTransition) return;
+    var from;
+    if (window.navigation && navigation.activation && navigation.activation.from) {
+      from = navigation.activation.from.url;
+    } else {
+      try {
+        var saved = JSON.parse(read(transitionKey));
+        if (saved && Date.now() - saved.time < 10000 && (!saved.to || index(saved.to) === index(location.href))) from = saved.from;
+      } catch (_) { /* Use a normal navigation if direction is unavailable. */ }
+    }
+    var previous = from ? index(from) : -1;
+    var current = index(location.href);
+    if (motion.matches || previous < 0 || current < 0 || previous === current) {
+      event.viewTransition.skipTransition();
+      return;
+    }
+    root.dataset.pageDirection = current > previous ? 'next' : 'previous';
+    event.viewTransition.finished.then(function () { delete root.dataset.pageDirection; });
+  });
+
+  var horizontal = 0;
+  var lastWheel = 0;
+  var blockedUntil = Number(read(gestureKey)) || 0;
+  window.addEventListener('pageshow', function () {
+    horizontal = 0;
+    lastWheel = 0;
+    blockedUntil = Number(read(gestureKey)) || 0;
+    pendingUrl = null;
+  });
+  document.addEventListener('wheel', function (event) {
+    if (index(location.href) < 0 || event.defaultPrevented || event.deltaMode !== 0 ||
+        event.ctrlKey || event.metaKey || event.altKey || event.shiftKey ||
+        !window.matchMedia('(min-width: 925px) and (pointer: fine)').matches) return;
+    var target = event.target instanceof Element ? event.target : null;
+    if (!target || !target.closest('#main') || target.closest('input, textarea, select, button, [contenteditable], pre, iframe')) return;
+    // Let tables, code samples, and other horizontally scrollable elements keep their own gestures.
+    for (var node = target; node && node !== document.body; node = node.parentElement) {
+      if (node.scrollWidth > node.clientWidth + 2 && /auto|scroll/.test(getComputedStyle(node).overflowX)) return;
+    }
+    if (Math.abs(event.deltaX) < 4 || Math.abs(event.deltaX) <= Math.abs(event.deltaY) * 1.7) {
+      horizontal = 0;
+      return;
+    }
+    if (Date.now() < blockedUntil) { event.preventDefault(); return; }
+    var next = paths[index(location.href) + (event.deltaX > 0 ? 1 : -1)];
+    if (!next) return;
+    event.preventDefault();
+    var now = performance.now();
+    if (now - lastWheel > 220 || Math.sign(horizontal) !== Math.sign(event.deltaX)) horizontal = 0;
+    lastWheel = now;
+    horizontal += event.deltaX;
+    if (Math.abs(horizontal) < 100) return;
+    // One deliberate swipe advances one tab; its momentum cannot skip the next page.
+    blockedUntil = Date.now() + 1000;
+    write(gestureKey, String(blockedUntil));
+    pendingUrl = new URL(next, location.origin).href;
+    location.assign(pendingUrl);
+  }, {passive: false});
+}());
+</script>

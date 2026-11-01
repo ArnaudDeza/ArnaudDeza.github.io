@@ -35,6 +35,22 @@ python3 scripts/check_site.py _site
 GitHub Pages publishes from `master`; pushing is a separate release action.
 A local build does not publish the site.
 
+## Page transitions and affiliation badges
+
+The main navigation pages use native cross-document view transitions, with the sidebar
+and header held still while the content slides. `_includes/page-transitions.html` derives
+the page order from `_data/navigation.yml`. On desktop, a deliberate horizontal trackpad
+swipe over the main area advances one tab; vertical scrolling, editable fields, and
+horizontally scrollable content retain their usual behavior. Swipe momentum is ignored
+briefly after a page change. Phones continue to use the header links.
+
+Reduced-motion preferences disable the slide. Browsers without view transitions retain
+ordinary page navigation. Every tab is still a full page load, so its own canonical URL,
+robots directive (including the CV's intentional `noindex`), and analytics initialization
+are preserved. Affiliation marks beside the author name link to the organizations and
+include accessible names and hover labels. Their source assets are documented in
+`images/badges/README.md`.
+
 ## Optimized assets
 
 Font subsets, responsive profile images, and the small CV logo are checked in, so GitHub Pages needs no

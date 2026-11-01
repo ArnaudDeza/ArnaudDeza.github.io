@@ -19,7 +19,14 @@
   </div>
 
   <div class="author__content">
-    <p class="author__name">{{ author.name }}</p>
+    <div class="author__name-row">
+      <p class="author__name">{{ author.name }}</p>
+      <span class="author__badges" aria-label="Affiliations">
+        <a class="author__badge" href="https://www.gatech.edu/" aria-label="Georgia Tech — PhD student" title="Georgia Tech · PhD student"><img src="{{ '/images/badges/georgia-tech.svg' | relative_url }}" width="22" height="22" alt=""></a>
+        <a class="author__badge" href="https://www.ai4opt.org/" aria-label="AI4OPT — graduate researcher" title="AI4OPT · Graduate researcher"><img src="{{ '/images/badges/ai4opt.svg' | relative_url }}" width="22" height="22" alt=""></a>
+        <a class="author__badge author__badge--amazon" href="https://www.amazon.science/" aria-label="Amazon — Applied Scientist intern, Fall 2026" title="Amazon · Applied Scientist intern, Fall 2026"><img src="{{ '/images/badges/amazon.svg' | relative_url }}" width="22" height="22" alt=""></a>
+      </span>
+    </div>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>

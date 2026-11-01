@@ -38,6 +38,92 @@ html[data-theme="dark"] {
 .author__avatar img { height: auto; }
 .author__name { font-weight: bold; }
 
+.author__name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.5rem;
+  margin: 0.45rem 0 0.6rem;
+}
+
+.sidebar .author__name-row .author__name { margin: 0; }
+
+.author__badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+.author__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  transition: transform 150ms ease;
+}
+
+.sidebar .author__badge img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.author__badge--amazon { background: #fff; }
+.author__badge:hover { transform: translateY(-2px); }
+.author__badge:focus-visible { outline: 2px solid var(--global-link-color); outline-offset: 3px; }
+
+/* Real document navigations keep canonical URLs, robots tags, and GA page views intact. */
+@view-transition { navigation: auto; }
+
+html[data-site-page] {
+  // The theme's delayed fade-in would otherwise produce an empty incoming snapshot.
+  #main { animation: none; }
+  .masthead { view-transition-name: site-masthead; animation: none; }
+  #main > .sidebar { view-transition-name: site-sidebar; }
+  #main > .page, #main > .archive { view-transition-name: page-content; }
+}
+
+::view-transition-old(root), ::view-transition-new(root),
+::view-transition-group(site-masthead), ::view-transition-group(site-sidebar) { animation: none; }
+
+::view-transition-old(site-masthead), ::view-transition-old(site-sidebar) { display: none; }
+::view-transition-new(site-masthead), ::view-transition-new(site-sidebar) { animation: none; }
+
+::view-transition-group(page-content) {
+  overflow: clip;
+  animation-duration: 460ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(page-content), ::view-transition-new(page-content) {
+  height: 100%;
+  object-fit: none;
+  object-position: top left;
+  mix-blend-mode: normal;
+  animation-duration: 460ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html[data-page-direction="next"]::view-transition-old(page-content) { animation-name: page-out-left; }
+html[data-page-direction="next"]::view-transition-new(page-content) { animation-name: page-in-right; }
+html[data-page-direction="previous"]::view-transition-old(page-content) { animation-name: page-out-right; }
+html[data-page-direction="previous"]::view-transition-new(page-content) { animation-name: page-in-left; }
+
+@keyframes page-out-left { to { transform: translateX(-100%); } }
+@keyframes page-in-right { from { transform: translateX(100%); } }
+@keyframes page-out-right { to { transform: translateX(100%); } }
+@keyframes page-in-left { from { transform: translateX(-100%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  .author__badge { transition: none; }
+  .author__badge:hover { transform: none; }
+}
+
 .archive--publications {
   font-size: 0.88rem;
 }
