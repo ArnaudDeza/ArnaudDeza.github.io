@@ -77,7 +77,7 @@
         event.ctrlKey || event.metaKey || event.altKey || event.shiftKey ||
         !window.matchMedia('(min-width: 925px) and (pointer: fine)').matches) return;
     var target = event.target instanceof Element ? event.target : null;
-    if (!target || !target.closest('#main') || target.closest('input, textarea, select, button, [contenteditable], pre, iframe')) return;
+    if (!target || !target.closest('#main') || target.closest('.news-scroll, input, textarea, select, button, [contenteditable], pre, iframe')) return;
     /* Let horizontally scrollable elements keep their own gestures. */
     for (var node = target; node && node !== document.body; node = node.parentElement) {
       if (node.scrollWidth > node.clientWidth + 2 && /auto|scroll/.test(getComputedStyle(node).overflowX)) return;

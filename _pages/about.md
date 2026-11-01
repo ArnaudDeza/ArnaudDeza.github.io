@@ -33,7 +33,7 @@ redirect_from:
         <button type="button" class="news-filter__button" data-news-filter="2023" aria-pressed="false">2023</button>
         <button type="button" class="news-filter__button" data-news-filter="2022" aria-pressed="false">2022</button>
       </div>
-      <div class="news-scroll" aria-label="Recent news">
+      <div class="news-scroll" role="region" aria-label="Recent news" tabindex="0">
         <article class="news-item" data-year="2026">
           <time datetime="2026-10">October 2026</time>
           <p>Two papers accepted to NeurIPS 2026 workshops: <a href="https://arxiv.org/abs/2609.09108">SHARDLP</a> at <a href="https://opt-ml.org/">OPT</a> (Sydney), and <a href="https://arxiv.org/abs/2605.18692">LLM-guided re-optimization</a> at <a href="https://mlxor-2026.github.io/">ML×OR</a> (Atlanta)!</p>
